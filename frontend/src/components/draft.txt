@@ -1,0 +1,82 @@
+{userInfo ? (
+            <div className="relative flex">
+              <button
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+                className="flex items-center gap-2 bg-[#8B4513] text-white px-4 py-2 rounded-full hover:bg-[#6F3B10] transition"
+              >
+                {userInfo.name}
+                <ChevronDown
+                  className={`w-4 h-4 transform transition-transform ${
+                    dropdownOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+
+              {dropdownOpen && (
+                <div className="absolute right-0 mt-2 w-40 bg-white border rounded-lg shadow-md z-20">
+                  <Link
+                    to="/profile"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-t-lg"
+                    onClick={() => setDropdownOpen(false)}
+                  >
+                    Profile
+                  </Link>
+                  <button
+                    onClick={handleLogout}
+                    className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-b-lg"
+                  >
+                    Logout
+                  </button>
+                </div>
+              )}
+
+              <Link
+              to='/addProject'
+                className="flex items-center gap-2 bg-[#8B4513] text-white px-4 py-2 rounded-full hover:bg-[#6F3B10] transition"
+              >
+                Add Project
+                
+              </Link>
+            </div>
+            
+          ) : (
+            <>
+              <Link to="/login">
+                <li className="hover:text-[#8B4513] cursor-pointer transition-colors">
+                  Login
+                </li>
+              </Link>
+              <Link to="/register">
+                <li className="hover:text-[#8B4513] cursor-pointer transition-colors">
+                  Register
+                </li>
+              </Link>
+            </>
+          )}
+
+
+          mobile
+
+          {userInfo ? (
+              <>
+                <li className="text-[#8B4513] font-semibold">{userInfo.name}</li>
+                <Link to="/profile" onClick={() => setIsOpen(false)}>
+                  <li className="hover:text-[#8B4513]">Profile</li>
+                </Link>
+                <button
+                  onClick={handleLogout}
+                  className="text-red-500 hover:underline"
+                >
+                  Logout
+                </button>
+              </>
+            ) : (
+              <>
+                <Link to="/login" onClick={() => setIsOpen(false)}>
+                  <li className="hover:text-[#8B4513]">Login</li>
+                </Link>
+                <Link to="/register" onClick={() => setIsOpen(false)}>
+                  <li className="hover:text-[#8B4513]">Register</li>
+                </Link>
+              </>
+            )}
