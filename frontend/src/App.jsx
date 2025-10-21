@@ -8,6 +8,8 @@ import ProfilePage from './pages/ProfilePage'
 import PrivateRoute from './components/PrivateRoute'
 import AddProject from './components/projects/AddProject'
 import ServicesPage from './pages/ServicesPage'
+import AboutUs from './pages/AboutUs'
+import ContactPage from './pages/ContactPage'
 
 
 
@@ -23,6 +25,8 @@ function App() {
           <Route path='/login' element={<LoginPage />} />
           <Route path='/register' element={<RegisterPage />} />
           <Route path='/services' element={<ServicesPage />} />
+          <Route path='/about' element={<AboutUs />} />
+          <Route path='/contact' element={<ContactPage />} />
           {/* Private Routes */}
           <Route path='' element={<PrivateRoute />}>
             <Route path='/profile' element={<ProfilePage />} />
