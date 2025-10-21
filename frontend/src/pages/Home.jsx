@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import WhyUs from '../components/WhyUs'
 import ServicesPreview from '../components/ServicesPreview'
 import AboutUsInvite from '../components/AboutUsInvite'
+import Contact from '../components/Contact'
 
 const Home = () => {
     return (
@@ -16,6 +17,7 @@ const Home = () => {
             <WhyUs />
             <ServicesPreview />
             <AboutUsInvite />
+            <Contact />
         </>
 
     )
