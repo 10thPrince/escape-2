@@ -56,12 +56,12 @@ const AboutUsSection = () => {
           variants={iconVariants}
           whileHover="hover"
         >
-          <Info size={48} color="#8B4513" className="drop-shadow-sm" />
+          <Info size={48} color="#A57F2F" className="drop-shadow-sm" />
         </motion.div>
 
         {/* Content */}
         <div className="text-center md:text-left">
-          <h2 className="text-3xl font-bold text-[#8B4513] mb-4 tracking-tight">
+          <h2 className="text-3xl font-bold text-primary mb-4 tracking-tight fugaz">
             Get to Know Us
           </h2>
           <p className="text-gray-700 text-lg mb-6 max-w-md">
@@ -75,7 +75,7 @@ const AboutUsSection = () => {
           >
             <Link
               to="/about"
-              className="inline-block px-6 py-3 bg-[#8B4513] text-white rounded-full font-medium text-sm uppercase tracking-wide shadow-lg hover:shadow-xl transition-shadow"
+              className="inline-block px-6 py-3 bg-primary text-white rounded-full font-medium text-sm uppercase tracking-wide shadow-lg hover:shadow-xl transition-shadow"
             >
               Explore Our Story onUs
             </Link>

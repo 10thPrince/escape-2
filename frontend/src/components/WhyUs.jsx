@@ -5,25 +5,25 @@ import { Palette, Hammer, Home, Sparkles } from "lucide-react"; // Lucide icons
 
 const values = [
   {
-    icon: <Palette size={40} className="text-[#8B4513]" />,
+    icon: <Palette size={40} className="text-primary" />,
     title: "Creative Design",
     description:
       "Every space we design reflects your personality — crafted with imagination and modern style.",
   },
   {
-    icon: <Hammer size={40} className="text-[#8B4513]" />,
+    icon: <Hammer size={40} className="text-primary" />,
     title: "Quality Craftsmanship",
     description:
       "We partner with expert artisans to ensure premium finishes and lasting quality in every project.",
   },
   {
-    icon: <Home size={40} className="text-[#8B4513]" />,
+    icon: <Home size={40} className="text-primary" />,
     title: "Functional Spaces",
     description:
       "Our designs blend beauty with practicality — ensuring comfort, flow, and purpose in every room.",
   },
   {
-    icon: <Sparkles size={40} className="text-[#8B4513]" />,
+    icon: <Sparkles size={40} className="text-primary" />,
     title: "Modern Aesthetic",
     description:
       "Sleek, timeless, and elegant — our modern aesthetic elevates your environment effortlessly.",
@@ -34,7 +34,7 @@ const WhyUs = () => {
   return (
      <section id="why-us" className="py-20 my-10 bg-gray-50 text-center">
       <motion.h2
-        className="text-4xl font-bold mb-12 text-gray-800"
+        className="text-4xl font-bold mb-12 text-gray-800 fugaz"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}

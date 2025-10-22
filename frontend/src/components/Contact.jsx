@@ -36,7 +36,7 @@ const Contact = () => {
           viewport={{ once: true }}
         >
           <motion.span
-            className="block"
+            className="block fugaz"
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
@@ -44,7 +44,7 @@ const Contact = () => {
             Ready to Elevate
           </motion.span>
           <motion.span
-            className="block"
+            className="block fugaz"
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}

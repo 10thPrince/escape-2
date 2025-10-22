@@ -16,7 +16,7 @@ const app = express();
 
 
 app.use(cors({
-    origin: ['http://localhost:3500'],
+    origin: ['http://localhost:3500', 'https://escape-2-tau.vercel.app'],
     credentials: true,
 }));
 app.use(express.json());

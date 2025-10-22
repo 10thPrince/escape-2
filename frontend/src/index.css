@@ -1,17 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Peta:wght@100..900&display=swap');
 @import "tailwindcss";
 /* @plugin "flowbite-react/plugin/tailwindcss";
 @source "../.flowbite-react/class-list.json"; */
+/* @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap'); */ */
+
+
+body{
+  font-family: "Lexend Peta", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.fugaz {
+  font-family: "Fugaz One", sans-serif;
+}
+
+
 
 @theme {
-  /* --color-border: hsl(var(--border));
+  --color-border: hsl(var(--border));
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
 
-  --color-primary: hsl(var(--primary));
+  --color-primary: var(--primary);
   --color-secondary: hsl(var(--secondary));
   --color-primary-foreground: hsl(var(--primary-foreground));
 
-  --color-card: hsl(var(--card)); */
+  --color-card: hsl(var(--card));
 
   --animate-fade-in: fade-in 0.7s ease-out forwards;
   --animate-fade-in-delay-1: fade-in 0.7s ease-out 0.2s forwards;
@@ -41,7 +57,7 @@
 
     --card: 0 0% 100%;
 
-    --primary: 250 47% 60%;
+    --primary: #A57F2F;
     --secondary: 0, 0%, 93%;
     --primary-foreground: 210 40% 98%;
 

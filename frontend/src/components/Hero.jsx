@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import heroBg from '../assets/hero-bg.png';
+import heroBg1 from '../assets/hero-1.jpeg';
+import heroBg2 from '../assets/hero-2.jpg';
 import { Link } from "react-router-dom"
 
 const Hero = () => {
@@ -8,39 +10,42 @@ const Hero = () => {
     
 
     <section
-      className="relative h-screen bg-cover bg-center flex items-center justify-center text-center"
-      style={{ backgroundImage: `url(${heroBg})` }}
+      className="relative min-h-screen bg-cover bg-center flex flex-col py-30 my-auto items-center justify-center text-center"
+      
     >
-      {/* Overlay for dark tint */}
-      <div className="absolute inset-0 bg-black/50"></div>
+      {/* First image */}
+      
+      <img src={heroBg2} 
+        className="h-[50vh] object-cover w-full  object-center  top-0 left-0 -z-10 " alt="" />
+      
 
       {/* Content */}
       <motion.div
-        className="relative z-10 max-w-2xl text-white px-4"
+        className="relative z-10 max-w-3xl my-10 text-black px-4"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
         <motion.h1
-          className="text-5xl md:text-6xl font-bold mb-6"
+          className="text-4xl md:text-6xl font-medium mb-6 fugaz"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 1 }}
         >
-          Transforming Spaces Into Timeless Designs
+          Transforming Spaces Into <span className="text-primary">Timeless</span>  Designs
         </motion.h1>
 
         <motion.p
-          className="text-lg md:text-xl mb-8 text-gray-200"
+          className="text-lg md:text-xl my-8 text-black/80"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7, duration: 1 }}
         >
-          Discover the art of interior design with Escape LTD — where creativity meets comfort.
+          At Escape LTD, we believe every space tells a story. Through creativity, craftsmanship, and attention to detail, we transform ordinary environments into extraordinary experiences. From residential comfort to commercial elegance, we design interiors that inspire connection, warmth, and lasting beauty.
         </motion.p>
 
         <motion.button
-          className="bg-white text-[#8B4513] cursor-pointer px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-100 transition"
+          className="bg-white border-[#A57F2F] border-1 text-[#A57F2F] cursor-pointer px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-100 transition"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >

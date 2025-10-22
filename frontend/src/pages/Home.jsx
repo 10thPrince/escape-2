@@ -7,10 +7,13 @@ import WhyUs from '../components/WhyUs'
 import ServicesPreview from '../components/ServicesPreview'
 import AboutUsInvite from '../components/AboutUsInvite'
 import Contact from '../components/Contact'
+import Footer from '../components/Footer'
+import FloatingSocials from '../components/FloatingSocials'
 
 const Home = () => {
     return (
         <>
+            <FloatingSocials />
             <Navbar />
             <ToastContainer />
             <Hero />
@@ -18,6 +21,7 @@ const Home = () => {
             <ServicesPreview />
             <AboutUsInvite />
             <Contact />
+            <Footer />
         </>
 
     )
