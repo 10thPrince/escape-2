@@ -41,13 +41,13 @@ app.use('/api/projects', projectsRoutes);
 //         })
 //     })
 // } else {
-//     app.get('/', (req, res) => {
-//         res.status(200).json({ message: 'App running Successfully' })
-//     })
+//     
 // }
 
 //res.sendFile(path.resolve(__dirname, 'frontend', 'dist', 'index.html'))
-
+app.get('/', (req, res) => {
+    res.status(200).json({ message: 'App running Successfully' })
+})
 app.listen(port, () => {
     console.log(`App running on port: ${port}`)
 })
