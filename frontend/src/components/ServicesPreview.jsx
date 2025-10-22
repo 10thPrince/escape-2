@@ -1,30 +1,72 @@
 import { motion } from "framer-motion";
-import { Paintbrush, Ruler, Sofa } from "lucide-react";
+import { Paintbrush, Ruler, Sofa, Utensils, Layout, DoorOpen, Table } from "lucide-react";
 import livingRoom from "../assets/living-room.jpg";
 import officeDesign from "../assets/office-design.jpg";
 import furnitureSet from "../assets/furniture.jpg";
+import ceilingImage from '../assets/services/CEILING.jpg';
+import flooringImage from '../assets/services/FLOORING.jpeg';
+import kitchenImage from '../assets/services/KITCHEN.jpg';
+import modernLivingRoomImage from '../assets/services/Modern living room.jpeg';
+import paintingImage from '../assets/services/PAINTING.jpg';
+import partitioningImage from '../assets/services/PARTITIONING.jpg';
+import boothsImage from '../assets/services/BOOTHS.webp';
+import doorsImage from '../assets/services/DOORS.webp';
+import furnituresImage from '../assets/services/FURNITURES.webp';
 
 const services = [
   {
-    icon: <Paintbrush className="text-[#8B4513]" size={36} />,
-    title: "Interior Design",
-    description:
-      "We blend creativity and elegance to design unique interiors that tell your story.",
-    image: livingRoom,
+    icon: <Paintbrush className="text-primary" size={36} />,
+    title: "Ceiling Design",
+    description: "Elegant ceiling solutions to enhance your space's aesthetic.",
+    image: ceilingImage,
   },
   {
-    icon: <Ruler className="text-[#8B4513]" size={36} />,
-    title: "Space Planning",
-    description:
-      "Smart and functional layouts that maximize comfort and aesthetic harmony.",
-    image: officeDesign,
+    icon: <Ruler className="text-primary" size={36} />,
+    title: "Flooring Design",
+    description: "Stylish and durable flooring options for every room.",
+    image: flooringImage,
   },
   {
-    icon: <Sofa className="text-[#8B4513]" size={36} />,
-    title: "Furniture & Decor",
-    description:
-      "Bespoke furniture and curated decor pieces that elevate your living and working spaces.",
-    image: furnitureSet,
+    icon: <Utensils className="text-primary" size={36} />,
+    title: "Kitchen Design",
+    description: "Modern kitchen layouts with functional and chic designs.",
+    image: kitchenImage,
+  },
+  {
+    icon: <Sofa className="text-primary" size={36} />,
+    title: "Modern Living Room",
+    description: "Contemporary living spaces tailored to your lifestyle.",
+    image: modernLivingRoomImage,
+  },
+  {
+    icon: <Paintbrush className="text-primary" size={36} />,
+    title: "Painting Services",
+    description: "Expert painting to transform your interiors with color.",
+    image: paintingImage,
+  },
+  // {
+  //   icon: <Paintbrush className="text-primary" size={36} />,
+  //   title: "Partitioning Solutions",
+  //   description: "Custom partitions for flexible and stylish space division.",
+  //   image: partitioningImage,
+  // },
+  {
+    icon: <Layout className="text-primary" size={36} />,
+    title: "Booths Design",
+    description: "Cozy and innovative booth designs for unique interiors.",
+    image: boothsImage,
+  },
+  {
+    icon: <DoorOpen className="text-primary" size={36} />,
+    title: "Doors Design",
+    description: "Elegant doors that add character to your space.",
+    image: doorsImage,
+  },
+  {
+    icon: <Table className="text-primary" size={36} />,
+    title: "Furnitures Design",
+    description: "Custom furniture to complement your interior vision.",
+    image: furnituresImage,
   },
 ];
 
@@ -33,7 +75,7 @@ const ServicesPreview = () => {
     <section className="py-20 bg-gray-50">
       <div className="text-center mb-12 px-6">
         <motion.h2
-          className="text-4xl font-bold text-gray-800 mb-3"
+          className="text-4xl font-bold text-gray-800 mb-3 fugaz"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -53,7 +95,7 @@ const ServicesPreview = () => {
         </motion.p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 max-w-8xl mx-auto px-6">
         {services.map((service, index) => (
           <motion.div
             key={index}
@@ -80,22 +122,13 @@ const ServicesPreview = () => {
                 {service.title}
               </h3>
               <p className="text-gray-600 text-sm">{service.description}</p>
+              <a href="/services" className="underline text-[#A57F2F] ">View Details {'>'}</a>
             </div>
           </motion.div>
         ))}
       </div>
 
-      {/* Call To Action */}
-      <div className="text-center mt-12">
-        <motion.a
-          href="/services"
-          className="inline-block bg-[#8B4513] text-white font-semibold py-3 px-8 rounded-full hover:bg-[#733A0F] transition"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          View All Services
-        </motion.a>
-      </div>
+      
     </section>
   );
 };

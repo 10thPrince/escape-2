@@ -6,6 +6,7 @@ import { logout } from "../slices/authSlice";
 import { useLogoutMutation } from "../slices/userApiSlice";
 import escape from '../assets/escape_logo-removebg-preview.png';
 import { MapPin } from "lucide-react";
+import { User } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,13 +18,13 @@ const Navbar = () => {
 
   const [logoutApiCall] = useLogoutMutation();
 
-  const handleLogout = async() => {
+  const handleLogout = async () => {
     try {
-        await logoutApiCall().unwrap();
-        dispatch(logout());
-        navigate("/login");
+      await logoutApiCall().unwrap();
+      dispatch(logout());
+      navigate("/login");
     } catch (error) {
-        
+
     }
   };
 
@@ -38,33 +39,49 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8 text-gray-700 font-medium text-xl items-center">
           <Link to="/services">
-            <li className="hover:text-[#8B4513] hover:text-glow cursor-pointer transition-colors">
+            <li className="hover:text-[#A57F2F] hover:text-glow cursor-pointer transition-colors">
               Our Services
             </li>
           </Link>
           <Link to="/about">
-            <li className="hover:text-[#8B4513] hover:text-glow cursor-pointer transition-colors">
+            <li className="hover:text-[#A57F2F] hover:text-glow cursor-pointer transition-colors">
               About Us
             </li>
           </Link>
           <Link to="/contact">
-            <li className="hover:text-[#8B4513] hover:text-glow cursor-pointer transition-colors">
+            <li className="hover:text-[#A57F2F] hover:text-glow cursor-pointer transition-colors">
               Contact Us
             </li>
           </Link>
+          <Link to="/projects">
+            <li className="hover:text-[#A57F2F] hover:text-glow cursor-pointer transition-colors">
+              Projects
+            </li>
+          </Link>
 
-          
+
         </ul>
 
         {/* Location Button (Desktop) */}
-        <div className="hidden md:block">
-          <Link 
-            to="/location"
-            className="flex gap-x-5 underline bg-transparent border-border text-black px-5 py-2 rounded-sm hover:bg-[#6F3B10] hover:text-white transition-colors">
-            <MapPin />
-            Our Location
-          </Link>
-        </div>
+        {userInfo ?
+          <div className="hidden md:block">
+            <Link
+              to="/profile"
+              className="flex gap-x-5 underline bg-transparent border-border text-black px-5 py-2 rounded-sm hover:bg-[#6F3B10] hover:text-white transition-colors">
+              <User />
+              Manage Profile
+            </Link>
+          </div> :
+          <div className="hidden md:block">
+            <Link
+              to="/location"
+              className="flex gap-x-5 underline bg-transparent border-border text-black px-5 py-2 rounded-sm hover:bg-[#6F3B10] hover:text-white transition-colors">
+              <MapPin />
+              Our Location
+            </Link>
+          </div>
+        }
+
 
         {/* Hamburger Icon (Mobile) */}
         <button
@@ -82,13 +99,20 @@ const Navbar = () => {
             <li className="hover:text-[#8B4513] hover:text-glow cursor-pointer ">Our Services</li>
             <li className="hover:text-[#8B4513] hover:text-glow cursor-pointer">About Us</li>
             <li className="hover:text-[#8B4513] hover:text-glow cursor-pointer">Contact Us</li>
+            <li className="hover:text-[#8B4513] hover:text-glow cursor-pointer">Projects</li>
 
-            
 
-            <button className="flex  gap-x-5 bg-transparent text-black px-5 py-2 rounded-sm hover:bg-[#6F3B10] hover:text-white transition-colors">
-              <MapPin />
-              Our Location
-            </button>
+            {userInfo ?
+              <button href='/profile' className="flex  gap-x-5 bg-transparent text-black px-5 py-2 rounded-sm hover:bg-[#6F3B10] hover:text-white transition-colors">
+                <MapPin />
+                Manage Profile
+              </button> :
+              <button className="flex  gap-x-5 bg-transparent text-black px-5 py-2 rounded-sm hover:bg-[#6F3B10] hover:text-white transition-colors">
+                <User />
+                Our Location
+              </button>
+            }
+
           </ul>
         </div>
       )}
