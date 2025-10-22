@@ -3,12 +3,12 @@ import { Paintbrush, Ruler, Sofa, Utensils, Layout, DoorOpen, Table } from "luci
 import livingRoom from "../assets/living-room.jpg";
 import officeDesign from "../assets/office-design.jpg";
 import furnitureSet from "../assets/furniture.jpg";
-import ceilingImage from '../assets/services/CEILING.JPG';
+import ceilingImage from '../assets/services/CEILING.jpg';
 import flooringImage from '../assets/services/FLOORING.jpeg';
-import kitchenImage from '../assets/services/KITCHEN.JPG';
+import kitchenImage from '../assets/services/KITCHEN.jpg';
 import modernLivingRoomImage from '../assets/services/Modern living room.jpeg';
-import paintingImage from '../assets/services/PAINTING.JPG';
-import partitioningImage from '../assets/services/PARTITIONING.JPG';
+import paintingImage from '../assets/services/PAINTING.jpg';
+import partitioningImage from '../assets/services/PARTITIONING.jpg';
 import boothsImage from '../assets/services/BOOTHS.webp';
 import doorsImage from '../assets/services/DOORS.webp';
 import furnituresImage from '../assets/services/FURNITURES.webp';
