@@ -81,7 +81,7 @@ const ContactPage = () => {
                   href="mailto:ntwariprinceh@gmail.com"
                   className="text-gray-600 hover:text-[#8B4513]"
                 >
-                  ntwariprinceh@gmail.com
+                  info@escapeltd.com
                 </a>
               </div>
             </div>
