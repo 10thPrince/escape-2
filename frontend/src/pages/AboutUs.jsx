@@ -3,9 +3,10 @@ import aboutMain from '../assets/about-main.jpg'
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import teamImg  from '../assets/hero-bg.png';
+import teamImg from '../assets/hero-bg.png';
 import interiorImg from '../assets/furniture.jpg'
 import founder from '../assets/founder.avif'
+import Footer from '../components/Footer';
 
 
 const fadeInUp = {
@@ -126,44 +127,45 @@ const AboutUs = () => {
                 </motion.section>
 
                 <section className="py-20 px-6 md:px-20 bg-gray-50">
-        <motion.h2
-          className="text-3xl font-semibold text-center mb-12"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          Meet The Team
-        </motion.h2>
-        <div className="max-w-4xl mx-auto text-center">
-          <img src={founder} alt="Founder" className="mx-auto rounded-full w-40 h-40 object-cover mb-4" />
-          <h3 className="text-2xl font-semibold text-gray-800">HOREBU</h3>
-          <p className="text-gray-600 mb-6">Founder &amp; Creative Director</p>
-          <p className="text-gray-700 leading-relaxed">With over a decade of experience in luxury interior design, HOREBU leads the creative vision at Escape Ltd — combining refined aesthetics, deep professionalism and a commitment to quality in every project.</p>
-        </div>
-      </section>
+                    <motion.h2
+                        className="text-3xl font-semibold text-center mb-12"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                    >
+                        Meet The Team
+                    </motion.h2>
+                    <div className="max-w-4xl mx-auto text-center">
+                        <img src={founder} alt="Founder" className="mx-auto rounded-full w-40 h-40 object-cover mb-4" />
+                        <h3 className="text-2xl font-semibold text-gray-800">HOREBU</h3>
+                        <p className="text-gray-600 mb-6">Founder &amp; Creative Director</p>
+                        <p className="text-gray-700 leading-relaxed">With over a decade of experience in luxury interior design, HOREBU leads the creative vision at Escape Ltd — combining refined aesthetics, deep professionalism and a commitment to quality in every project.</p>
+                    </div>
+                </section>
 
-      
-      <section className="bg-[#8B4513] text-white py-16 text-center">
-        <motion.h2
-          className="text-3xl font-bold mb-4"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          Ready to work together?
-        </motion.h2>
-        <motion.a
-          href="/contact"
-          className="inline-block bg-white text-[#8B4513] font-semibold py-3 px-8 rounded-full hover:bg-gray-100 transition"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Contact Us
-        </motion.a>
-      </section>
+
+                <section className="bg-[#8B4513] text-white py-16 text-center">
+                    <motion.h2
+                        className="text-3xl font-bold mb-4"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                    >
+                        Ready to work together?
+                    </motion.h2>
+                    <motion.a
+                        href="/contact"
+                        className="inline-block bg-white text-[#8B4513] font-semibold py-3 px-8 rounded-full hover:bg-gray-100 transition"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                    >
+                        Contact Us
+                    </motion.a>
+                </section>
             </div>
+            <Footer />
         </>
     )
 }
