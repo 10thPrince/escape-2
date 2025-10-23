@@ -28,36 +28,38 @@ const Navbar = () => {
   // Main services with sub-services
   const services = [
     {
-      title: "Interior Design",
-      subs: ["Home Design", "Office Design", "Custom Furniture"],
+      title: "Flooring",
+      subs: ["Laminate", "SPC(Water Proof)", "Decking", "Engineered woods", "Cleaning kits(Wooden floor)"],
+    },
+    
+    {
+      title: "Kitchen",
+      subs: ["Kitchen Renovation", " New Interior"],
     },
     {
-      title: "Architecture",
-      subs: ["Building Plans", "Blueprint Drafting", "3D Modelling"],
+      title: "Painting",
+      subs: ["Interior Painting", "Exterior Painting"],
     },
     {
-      title: "3D Visualization",
-      subs: ["Exterior Renders", "Interior Renders", "Animation"],
+      title: "Furnitures",
+      subs: ["Sofa", "Tables", "Cabinets & TV Stand", "Chairs", " Escape furnitures"],
     },
     {
-      title: "Landscape Design",
-      subs: ["Garden Planning", "Outdoor Lighting", "Irrigation Setup"],
+      title: "Booths",
+      subs: ["Exhibition booths", "Photo booths", "Decoration"],
+    },
+    
+    {
+      title: "Ceiling",
+      subs: ["Gypsum Ceiling", "TV Wall"],
     },
     {
-      title: "Construction",
-      subs: ["Residential", "Commercial", "Site Supervision"],
+      title: "Partition",
+      subs: ["Aluminium Partition", "Gypsum Partition"],
     },
     {
-      title: "Renovation",
-      subs: ["Home Makeover", "Office Remodeling", "Extensions"],
-    },
-    {
-      title: "Consultancy",
-      subs: ["Budget Planning", "Feasibility Studies", "Project Advice"],
-    },
-    {
-      title: "Project Management",
-      subs: ["Scheduling", "Team Coordination", "Quality Control"],
+      title: "Doors",
+      subs: ["Metal Doors", "Woden Doors", "Escape Doors"],
     },
   ];
 
@@ -84,7 +86,8 @@ const Navbar = () => {
             {dropdownOpen && (
               <div
                 onMouseLeave={() => setDropdownOpen(false)}
-                className="absolute left-0 top-10 bg-white shadow-2xl rounded-lg p-6 w-[1000px] border border-gray-100 grid grid-cols-4 gap-6 transition-all duration-200"
+                 className="absolute left-1/2 top-full -translate-x-[25%] mt-3 bg-white shadow-2xl rounded-lg p-6 w-[1000px] border border-gray-100 grid grid-cols-4 gap-6 transition-all duration-200"
+
               >
                 {services.map((service, index) => (
                   <div key={index}>
@@ -149,7 +152,7 @@ const Navbar = () => {
           <div className="hidden md:block">
             <a
               href="#footer"
-              className="flex gap-x-2 items-center underline text-black px-5 py-2 rounded-sm hover:bg-[#6F3B10] hover:text-white transition-colors"
+              className="flex gap-x-2 items-center underline text-black px-5 py-2 rounded-sm hover:bg-primary hover:text-white transition-colors"
             >
               <MapPin /> Our Location
             </a>

@@ -10,6 +10,7 @@ import AddProject from './components/projects/AddProject'
 import ServicesPage from './pages/ServicesPage'
 import AboutUs from './pages/AboutUs'
 import ContactPage from './pages/ContactPage'
+import ProjectsPage from './pages/ProjectsPage'
 
 
 
@@ -27,6 +28,7 @@ function App() {
           <Route path='/services' element={<ServicesPage />} />
           <Route path='/about' element={<AboutUs />} />
           <Route path='/contact' element={<ContactPage />} />
+          <Route path='/projects' element={<ProjectsPage />} />
           {/* Private Routes */}
           <Route path='' element={<PrivateRoute />}>
             <Route path='/profile' element={<ProfilePage />} />
