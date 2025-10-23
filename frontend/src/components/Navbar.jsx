@@ -103,7 +103,7 @@ const Navbar = () => {
                               .replace(/\s+/g, "-")}/${sub
                               .toLowerCase()
                               .replace(/\s+/g, "-")}`}
-                            className="block text-gray-600 hover:text-[#A57F2F] transition-colors"
+                            className="block text-gray-600 hover:underline font-light transition-colors"
                           >
                             {sub}
                           </Link>
@@ -117,7 +117,7 @@ const Navbar = () => {
           </li>
 
           <Link to="/about">
-            <li className="hover:text-[#A57F2F] cursor-pointer transition-colors">
+            <li className="hover:text-primary cursor-pointer transition-colors">
               About Us
             </li>
           </Link>
