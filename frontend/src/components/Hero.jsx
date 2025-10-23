@@ -2,25 +2,27 @@ import React from "react";
 import { motion } from "framer-motion";
 import heroBg from '../assets/hero-bg.png';
 import heroBg1 from '../assets/hero-1.jpeg';
+import home2 from '../assets/home2.jpg'
 import heroBg2 from '../assets/hero-2.jpg';
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import { ArrowDown } from "lucide-react";
 
 const Hero = () => {
   return (
-    
+
 
     <section
-      className="relative min-h-screen bg-cover bg-center flex flex-col py-30 my-auto items-center justify-center text-center"
-      
+      className="relative min-h-screen bg-cover bg-center flex flex-col py-5 my-auto items-center justify-center text-center"
+
     >
       {/* First image */}
-      
-      <img src={heroBg2} 
-        className="h-[50vh] object-cover w-full  object-center  top-0 left-0 -z-10 " alt="" />
-      
+
+      <img src={home2}
+        className="h-[90vh] object-cover w-full  object-center  top-0 left-0 -z-10 " alt="" />
+
 
       {/* Content */}
-      <motion.div
+      {/* <motion.div
         className="relative z-10 max-w-3xl my-10 text-black px-4"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -54,7 +56,7 @@ const Hero = () => {
           </Link>
 
         </motion.button>
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 };
