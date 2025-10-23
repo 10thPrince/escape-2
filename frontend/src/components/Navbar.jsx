@@ -91,12 +91,13 @@ const Navbar = () => {
               >
                 {services.map((service, index) => (
                   <div key={index}>
-                    <Link
+                    <div className="text-start"><Link
                       to={`/services/${service.title.toLowerCase().replace(/\s+/g, "-")}`}
                       className="font-semibold text-lg text-gray-800 hover:text-[#A57F2F] transition-colors"
                     >
                       {service.title}
-                    </Link>
+                    </Link></div>
+                    
                     <ul className="mt-2 space-y-1">
                       {service.subs.map((sub, i) => (
                         <li key={i}>
@@ -106,7 +107,7 @@ const Navbar = () => {
                               .replace(/\s+/g, "-")}/${sub
                               .toLowerCase()
                               .replace(/\s+/g, "-")}`}
-                            className="block text-gray-600 hover:underline font-light transition-colors"
+                            className="block text-start text-gray-600 hover:underline font-light transition-colors"
                           >
                             {sub}
                           </Link>
