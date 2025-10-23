@@ -14,6 +14,7 @@ const links = [
 const Footer = () => {
     return (
         <footer className="bg-[#1a1a1a] text-gray-300 pt-16 pb-8">
+            <section id="footer"></section>
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-6 gap-10 px-6">
                 {/* 1️⃣ Logo Section */}
                 <motion.div

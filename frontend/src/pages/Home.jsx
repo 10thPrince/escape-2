@@ -9,6 +9,7 @@ import AboutUsInvite from '../components/AboutUsInvite'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 import FloatingSocials from '../components/FloatingSocials'
+import Content from '../components/Content'
 
 const Home = () => {
     return (
@@ -20,6 +21,7 @@ const Home = () => {
             <WhyUs />
             <ServicesPreview />
             <AboutUsInvite />
+            <Content />
             <Contact />
             <Footer />
         </>
