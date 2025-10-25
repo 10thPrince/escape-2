@@ -107,7 +107,7 @@ body{
 
 @utility text-glow {
   @apply relative;
-  text-shadow: 0 0 10px rgba(139, 69, 19, 1);
+  text-shadow: 0 0 10px rgba(165, 127, 47, 1);
 }
 
 #root {

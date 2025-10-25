@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import contactImage from "../assets/hero-bg.png";
+import contactImage from "../assets/landing-page-2.jpg";
 import { ArrowUpRight } from "lucide-react";
 
 const Contact = () => {
@@ -44,7 +44,7 @@ const Contact = () => {
             Ready to Elevate
           </motion.span>
           <motion.span
-            className="block fugaz"
+            className="block fugaz text-glow"
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
@@ -61,8 +61,8 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           whileHover={{ x: 10, scale: 1.05 }}
           transition={{
-            duration: 0.4,
-            delay: 0.8,
+            duration: 0.1,
+            delay: 0.2,
             ease: "easeOut",
           }}
         >
