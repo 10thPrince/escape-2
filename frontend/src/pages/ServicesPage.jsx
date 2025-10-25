@@ -3,6 +3,7 @@ import { useParams, useLocation } from "react-router-dom";
 import { servicesData } from "../data/serviceData";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import ServicesPreview from "../components/ServicesPreview";
 
 const ServicesPage = () => {
   const { serviceName, subName } = useParams();
@@ -21,19 +22,25 @@ const ServicesPage = () => {
 
   if (!service)
     return (
-      <div className="text-center py-20 text-gray-500 text-xl">
-        Service not found 😔
-      </div>
+      <>
+        <Navbar />
+        <div className="text-center py-30 text-gray-500 text-xl">
+          {/* cards */}
+          <ServicesPreview />
+        </div>
+        <Footer />
+      </>
+
     );
 
   return (
-    <>
-    <Navbar />
-      <div className="max-w-5xl mx-auto px-6 py-30">
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <div className="max-w-5xl mx-auto min-h-[calc(100vh-64px)] px-6 py-30 ">
         <h1 className="text-4xl font-bold text-primary mb-10">{service.title}</h1>
         <div className="space-y-16">
           {service.subs.map((sub) => (
-            <section key={sub.id} ref={(el) => (refs.current[sub.id] = el)}>
+            <section key={sub.id} ref={(el) => (refs.current[sub.id] = el)} className="scroll-mt-30">
               <h2 className="text-2xl font-semibold text-gray-800 mb-2" id={sub.id}>
                 {sub.name}
               </h2>
@@ -43,7 +50,7 @@ const ServicesPage = () => {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
 
   );
 };
