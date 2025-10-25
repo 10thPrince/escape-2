@@ -92,7 +92,7 @@ const Navbar = () => {
             <li className="hover:text-primary cursor-pointer transition-colors">Contact Us</li>
           </Link>
           <Link to="/projects">
-            <li className="hover:text-primary cursor-pointer transition-colors">Projects</li>
+            <li className="hover:text-primary cursor-pointer transition-colors">Our Projects</li>
           </Link>
         </ul>
 
