@@ -16,7 +16,7 @@ const Footer = () => {
         <footer className="bg-[#1a1a1a] text-gray-300 pt-16 pb-8">
             <section id="footer"></section>
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-6 gap-10 px-6">
-                {/* 1️⃣ Logo Section */}
+                {/*  Logo Section */}
                 <motion.div
                     className="md:col-span-1 flex flex-col items-start space-y-4"
                     initial={{ opacity: 0, x: -30 }}
@@ -31,7 +31,7 @@ const Footer = () => {
                     
                 </motion.div>
 
-                {/* 2️⃣ Quick Links */}
+                {/*  Quick Links */}
                 <motion.div
                     className="md:col-span-1"
                     initial={{ opacity: 0, y: 20 }}
@@ -55,7 +55,7 @@ const Footer = () => {
                     </ul>
                 </motion.div>
 
-                {/* 3️⃣–6️⃣ Map Section */}
+                {/* Map Section */}
                 <motion.div
                     className="md:col-span-4"
                     initial={{ opacity: 0, x: 30 }}
@@ -66,16 +66,14 @@ const Footer = () => {
                         Our Location
                     </h3>
                     <div className="w-full h-[300px] rounded-xl overflow-hidden shadow-lg border border-[#8B4513]/20">
-                        <iframe
-                            title="Amahoro Stadium Location"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.507256657956!2d30.06010027504964!3d-1.9502396980320709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca42629737aa5%3A0x1dad4dee02c2a618!2sKN%2069%20St%2C%20Kigali!5e0!3m2!1sen!2srw!4v1761134704704!5m2!1sen!2srw"
-                            width="100%"
-                            height="100%"
-                            style={{ border: 0 }}
-                            allowFullScreen=""
-                            loading="lazy"
-                            referrerPolicy="no-referrer-when-downgrade"
-                        ></iframe>
+                        <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.5598386946945!2d30.066615075049572!3d-1.9279236980545675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca798ba611eed%3A0xf77e8460e27f9dbb!2sEscape%20ltd%20(Interior%20design%20company)!5e0!3m2!1sen!2suk!4v1761404636479!5m2!1sen!2suk" 
+                        width="100%" 
+                        height="100%" 
+                        style={{ border:0 }} 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                     </div>
                 </motion.div>
