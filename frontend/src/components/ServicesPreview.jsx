@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Paintbrush, Ruler, Sofa, Utensils, Layout, DoorOpen, Table } from "lucide-react";
+import { Paintbrush, Ruler, Sofa, Layers, Utensils, Layout, Grid, DoorOpen, Table } from "lucide-react";
 import livingRoom from "../assets/living-room.jpg";
 import officeDesign from "../assets/office-design.jpg";
 import furnitureSet from "../assets/furniture.jpg";
@@ -15,60 +15,55 @@ import furnituresImage from '../assets/services/FURNITURES.webp';
 
 const services = [
   {
-    icon: <Paintbrush className="text-primary" size={36} />,
-    title: "Ceiling Design",
-    description: "Elegant ceiling solutions to enhance your space's aesthetic.",
-    image: ceilingImage,
-  },
-  {
     icon: <Ruler className="text-primary" size={36} />,
-    title: "Flooring Design",
-    description: "Stylish and durable flooring options for every room.",
+    title: "Flooring",
+    description: "Laminate, SPC (Water Proof), Decking, Engineered Woods, and Cleaning Kits — stylish and durable flooring solutions built to last.",
     image: flooringImage,
   },
   {
     icon: <Utensils className="text-primary" size={36} />,
-    title: "Kitchen Design",
-    description: "Modern kitchen layouts with functional and chic designs.",
+    title: "Kitchen",
+    description: "From complete kitchen renovations to new interior designs — modern, functional, and beautiful spaces for every home.",
     image: kitchenImage,
   },
   {
-    icon: <Sofa className="text-primary" size={36} />,
-    title: "Modern Living Room",
-    description: "Contemporary living spaces tailored to your lifestyle.",
-    image: modernLivingRoomImage,
-  },
-  {
     icon: <Paintbrush className="text-primary" size={36} />,
-    title: "Painting Services",
-    description: "Expert painting to transform your interiors with color.",
+    title: "Painting",
+    description: "Professional interior and exterior painting services that add vibrant life and elegance to your walls.",
     image: paintingImage,
   },
-  // {
-  //   icon: <Paintbrush className="text-primary" size={36} />,
-  //   title: "Partitioning Solutions",
-  //   description: "Custom partitions for flexible and stylish space division.",
-  //   image: partitioningImage,
-  // },
+  {
+    icon: <Sofa className="text-primary" size={36} />,
+    title: "Furnitures",
+    description: "Custom-made sofas, tables, cabinets, chairs, and exclusive Escape furniture pieces to match your style.",
+    image: furnituresImage,
+  },
   {
     icon: <Layout className="text-primary" size={36} />,
-    title: "Booths Design",
-    description: "Cozy and innovative booth designs for unique interiors.",
+    title: "Booths",
+    description: "Creative exhibition and photo booths, plus stunning decorative setups designed to stand out.",
     image: boothsImage,
   },
   {
-    icon: <DoorOpen className="text-primary" size={36} />,
-    title: "Doors Design",
-    description: "Elegant doors that add character to your space.",
-    image: doorsImage,
+    icon: <Layers className="text-primary" size={36} />,
+    title: "Ceiling",
+    description: "Gypsum ceilings and stylish TV walls that add dimension, beauty, and sophistication to any space.",
+    image: ceilingImage,
   },
   {
-    icon: <Table className="text-primary" size={36} />,
-    title: "Furnitures Design",
-    description: "Custom furniture to complement your interior vision.",
-    image: furnituresImage,
+    icon: <Grid className="text-primary" size={36} />,
+    title: "Partition",
+    description: "Elegant aluminium and gypsum partitions for modern, flexible, and functional interiors.",
+    image: partitioningImage,
+  },
+  {
+    icon: <DoorOpen className="text-primary" size={36} />,
+    title: "Doors",
+    description: "Premium metal, wooden, and custom Escape doors that redefine your entrances with character and quality.",
+    image: doorsImage,
   },
 ];
+
 
 const ServicesPreview = () => {
   return (

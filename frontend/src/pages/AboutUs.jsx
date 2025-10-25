@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar'
 import aboutMain from '../assets/about-main.jpg'
+import aboutMain2 from '../assets/about/about-main.jpg'
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
@@ -41,7 +42,7 @@ const AboutSection = ({ title, text, img, reverse }) => {
                 />
             </div>
             <div className="flex-1 space-y-5">
-                <h2 className="text-3xl md:text-4xl font-bold text-[#8B4513]">
+                <h2 className="text-3xl md:text-4xl font-bold fugaz text-primary">
                     {title}
                 </h2>
                 <p className="text-gray-700 text-lg leading-relaxed">{text}</p>
@@ -59,19 +60,19 @@ const AboutUs = () => {
                 {/* Hero Section */}
                 <motion.div
                     className="relative h-[80vh] flex items-center justify-center text-center bg-cover bg-center"
-                    style={{ backgroundImage: `url(${aboutMain})` }}
+                    style={{ backgroundImage: `url(${aboutMain2})` }}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1.2 }}
                 >
-                    <div className="absolute inset-0 bg-black/50 bg-opacity-50"></div>
+                    <div className="absolute inset-0 bg-black/40 bg-opacity-50"></div>
                     <motion.h1
-                        className="relative text-white text-5xl md:text-6xl font-bold z-10"
+                        className="relative text-white text-5xl fugaz md:text-6xl font-bold z-10"
                         initial={{ y: -40, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 1 }}
                     >
-                        About Escape LTD
+                        About <span className='text-glow'> Escape LTD</span>
                     </motion.h1>
                 </motion.div>
 
@@ -92,7 +93,7 @@ const AboutUs = () => {
 
                 {/* Values Section */}
                 <motion.section
-                    className="py-20 bg-[#8B4513] text-white text-center space-y-8"
+                    className="py-20 bg-primary text-white text-center space-y-8"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 1 }}
@@ -115,7 +116,7 @@ const AboutUs = () => {
                         ].map((item, i) => (
                             <motion.div
                                 key={i}
-                                className="p-8 bg-white text-[#8B4513] rounded-2xl shadow-lg"
+                                className="p-8 bg-white text-primary rounded-2xl shadow-lg"
                                 whileHover={{ scale: 1.05 }}
                                 transition={{ duration: 0.3 }}
                             >
@@ -145,7 +146,7 @@ const AboutUs = () => {
                 </section>
 
 
-                <section className="bg-[#8B4513] text-white py-16 text-center">
+                <section className="bg-primary text-white py-16 text-center">
                     <motion.h2
                         className="text-3xl font-bold mb-4"
                         initial={{ opacity: 0, y: 20 }}
@@ -157,7 +158,7 @@ const AboutUs = () => {
                     </motion.h2>
                     <motion.a
                         href="/contact"
-                        className="inline-block bg-white text-[#8B4513] font-semibold py-3 px-8 rounded-full hover:bg-gray-100 transition"
+                        className="inline-block bg-white text-gray-800 font-semibold py-3 px-8 rounded-full hover:bg-gray-100 transition"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                     >
