@@ -43,7 +43,7 @@ const LoginPage = () => {
         <>
         <Navbar />
         <ToastContainer />
-        <div className="flex justify-center items-center min-h-screen bg-gray-50">
+        <div className="flex justify-center items-center min-h-screen py-30 bg-gray-50">
             
 
             <form

@@ -1,69 +1,65 @@
-// frontend/src/components/AddProject.jsx
-import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { addProject } from '../../slices/projectsSlice.js';
-import Spinner from '../Spinner.jsx';
+// import { useState } from "react";
+// import { useCreateProjectMutation } from "../../slices/projectsApiSlice.js";
+// import Navbar from "../Navbar.jsx";
+// import Footer from "../Footer.jsx";
 
-export default function AddProject() {
-  const dispatch = useDispatch();
-  const { loading, error, success } = useSelector(state => state.projects);
+// const CreateProject = () => {
+//   const [title, setTitle] = useState("");
+//   const [description, setDescription] = useState("");
+//   const [images, setImages] = useState([]);
+//   const [createProject, { isLoading }] = useCreateProjectMutation();
 
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const [files, setFiles] = useState([]);
-  const [previewUrls, setPreviewUrls] = useState([]);
 
-  const handleFiles = (e) => {
-    const fileList = e.target.files;
-    setFiles(fileList);
+//   const [previewUrls, setPreviewUrls] = useState([]);
 
-    // previews
-    const urls = [];
-    for (let i = 0; i < fileList.length; i++) {
-      urls.push(URL.createObjectURL(fileList[i]));
-    }
-    setPreviewUrls(urls);
-  };
+  
+  
+//   const handleFileChange = (e) => {
+//     setImages([...e.target.files]);
+//   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
 
-    if (!title || !description) {
-      alert('Title and description are required');
-      return;
-    }
 
-    const formData = new FormData();
-    formData.append('title', title);
-    formData.append('description', description);
-    for (let i = 0; i < files.length; i++) {
-      formData.append('image', files[i]);
-    }
-    
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+//     const formData = new FormData();
+//     formData.append("title", title);
+//     formData.append("description", description);
+//     images.forEach((file) => formData.append("images", file));
 
-    dispatch(addProject(formData));
+//     try {
+//       await createProject(formData).unwrap();
+//       alert("Project created successfully!");
+//       setTitle(""); setDescription(""); setImages([]);
+//     } catch (err) {
+//       alert(err?.data?.message || "Failed to create project.");
+//     }
+//   };
 
-    // optional: clear form on success (could be done in effect watching success)
-    setTitle(''); setDescription(''); setFiles([]); setPreviewUrls([]);
-  };
+//   return (
+//     <>
+//       <Navbar />
+//       <div className="my-30">
+//         <form onSubmit={handleSubmit} className="max-w-md mx-auto p-6 bg-white rounded-2xl shadow space-y-4">
+//           <input type="text" placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} className="w-full p-2 border rounded" />
+//           <textarea placeholder="Description" value={description} onChange={(e) => setDescription(e.target.value)} className="w-full p-2 border rounded" />
+//           <div>
+//             <input type="file" multiple onChange={handleFileChange} className="w-full p-2 border rounded" />
+//           </div>
 
-  return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      <div>
-        <input value={title} onChange={e => setTitle(e.target.value)} placeholder="Project title" required />
-      </div>
-      <div>
-        <textarea value={description} onChange={e => setDescription(e.target.value)} placeholder="Description" required />
-      </div>
-      <div>
-        <input type="file" accept="image/*" multiple onChange={handleFiles} />
-      </div>
-      <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-        {previewUrls.map((u, i) => <img key={i} src={u} alt="preview" width={120} />)}
-      </div>
-      <button type="submit" disabled={loading}>{loading ? <Spinner /> : 'Add Project'}</button>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-      {success && <p style={{ color: 'green' }}>Project added</p>}
-    </form>
-  );
-}
+//           <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+//             {previewUrls.map((u, i) => <img key={i} src={u} alt="preview" width={120} />)}
+//           </div>
+//           <button type="submit" disabled={isLoading} className="bg-black text-white py-2 px-4 rounded hover:bg-gray-800">
+//             {isLoading ? "Creating..." : "Create Project"}
+//           </button>
+//         </form>
+//       </div>
+
+//       <Footer />
+//     </>
+
+//   );
+// };
+
+// export default CreateProject;
