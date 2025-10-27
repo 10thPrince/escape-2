@@ -34,7 +34,7 @@ function App() {
           {/* Private Routes */}
           <Route path='' element={<PrivateRoute />}>
             <Route path='/profile' element={<ProfilePage />} />
-            {/* <Route path='/addProject' element={<AddProject />} /> */}
+            <Route path='/addProject' element={<AddProject />} />
           </Route>
         </Routes>
       </BrowserRouter>

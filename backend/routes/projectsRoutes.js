@@ -5,7 +5,7 @@ import { upload } from "../middleware/upload.js";
 
 const router = e.Router()
 
-router.post('/', protect, upload.array('image', 3), createProject)
+router.post('/', protect, upload.array('images', 3), createProject)
 router.get('/', getAllProjects)
 
 export default router
