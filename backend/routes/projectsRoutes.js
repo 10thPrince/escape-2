@@ -1,10 +1,11 @@
 import e from "express";
-import { createProject } from "../controllers/projectsController.js";
+import { createProject, getAllProjects } from "../controllers/projectsController.js";
 import { protect } from "../middleware/authMiddleware.js";
 import { upload } from "../middleware/upload.js";
 
 const router = e.Router()
 
 router.post('/', protect, upload.array('image', 3), createProject)
+router.get('/', getAllProjects)
 
 export default router

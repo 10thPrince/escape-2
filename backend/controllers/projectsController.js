@@ -16,6 +16,7 @@ const uploadBufferToCloudinary = (buffer, folder = 'escape_ltd_projects') => {
         streamifier.createReadStream(buffer).pipe(uploadStream);
     });
 };
+
 //@Desc Creating A new Project
 //@route POST /api/projects/
 //@access PRIVATE
@@ -49,4 +50,13 @@ export const createProject = asyncHandler(async (req, res) => {
 
     const created = await project.save();
     res.status(201).json(created);
+})
+
+//@Desc Fetch All Projects
+//@route GET /api/projects/
+//@access PUBLIC
+export const getAllProjects = asyncHandler(async(req, res) => {
+    const projects = await Projects.find({}).sort({ createdAt: -1 });
+
+    res.status(200).json(projects);
 })

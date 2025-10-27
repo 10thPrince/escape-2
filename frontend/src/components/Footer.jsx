@@ -70,10 +70,9 @@ const Footer = () => {
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.5598386946945!2d30.066615075049572!3d-1.9279236980545675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca798ba611eed%3A0xf77e8460e27f9dbb!2sEscape%20ltd%20(Interior%20design%20company)!5e0!3m2!1sen!2suk!4v1761404636479!5m2!1sen!2suk" 
                         width="100%" 
                         height="100%" 
-                        style={{ border:0 }} 
-                        allowfullscreen="" 
+                        style={{ border:0 }}
                         loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        referrerPolicy="no-referrer-when-downgrade"></iframe>
 
                     </div>
                 </motion.div>
