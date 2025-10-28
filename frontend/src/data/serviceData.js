@@ -37,6 +37,31 @@ export const servicesData = {
     ],
   },
 
+  booths: {
+    title: "Booths",
+    description:
+      "We design and build premium-quality booths that bring your brand and events to life with style and functionality.",
+    subs: [
+      {
+        id: "exhibition-booths",
+        name: "Exhibition Booths",
+        description:
+          "Professional exhibition booths that combine impactful design and durability to showcase your brand effectively.",
+      },
+      {
+        id: "photo-booths",
+        name: "Photo Booths",
+        description:
+          "Custom-designed photo booths that add a unique experience to events, weddings, and exhibitions.",
+      },
+      {
+        id: "decoration",
+        name: "Decoration",
+        description:
+          "Creative booth decoration services — enhancing aesthetics through lighting, color, and design details.",
+      },
+    ],
+  },
   kitchen: {
     title: "Kitchen",
     description:
@@ -53,26 +78,6 @@ export const servicesData = {
         name: "New Interior",
         description:
           "Complete interior design solutions for brand-new kitchens, blending contemporary design with top-quality materials.",
-      },
-    ],
-  },
-
-  painting: {
-    title: "Painting",
-    description:
-      "We deliver professional painting services for both interiors and exteriors — enhancing your space with quality and precision.",
-    subs: [
-      {
-        id: "interior-painting",
-        name: "Interior Painting",
-        description:
-          "Premium interior painting using high-quality, low-odor paints to create smooth finishes and vibrant atmospheres.",
-      },
-      {
-        id: "exterior-painting",
-        name: "Exterior Painting",
-        description:
-          "Durable exterior coatings designed to protect your walls and maintain aesthetic appeal in all weather conditions.",
       },
     ],
   },
@@ -114,73 +119,6 @@ export const servicesData = {
       },
     ],
   },
-
-  booths: {
-    title: "Booths",
-    description:
-      "We design and build premium-quality booths that bring your brand and events to life with style and functionality.",
-    subs: [
-      {
-        id: "exhibition-booths",
-        name: "Exhibition Booths",
-        description:
-          "Professional exhibition booths that combine impactful design and durability to showcase your brand effectively.",
-      },
-      {
-        id: "photo-booths",
-        name: "Photo Booths",
-        description:
-          "Custom-designed photo booths that add a unique experience to events, weddings, and exhibitions.",
-      },
-      {
-        id: "decoration",
-        name: "Decoration",
-        description:
-          "Creative booth decoration services — enhancing aesthetics through lighting, color, and design details.",
-      },
-    ],
-  },
-
-  ceiling: {
-    title: "Ceiling",
-    description:
-      "Transform your space with high-end ceiling designs that enhance lighting, style, and acoustic comfort.",
-    subs: [
-      {
-        id: "gypsum-ceiling",
-        name: "Gypsum Ceiling",
-        description:
-          "Custom gypsum ceiling installations that elevate interiors with modern patterns and smooth finishes.",
-      },
-      {
-        id: "tv-wall",
-        name: "TV Wall",
-        description:
-          "Creative wall paneling solutions for TVs — blending design and functionality for modern interiors.",
-      },
-    ],
-  },
-
-  partition: {
-    title: "Partition",
-    description:
-      "Our partition systems redefine spaces — creating privacy and flexibility while maintaining open, elegant designs.",
-    subs: [
-      {
-        id: "aluminium-partition",
-        name: "Aluminium Partition",
-        description:
-          "Durable and modern aluminium partitions for offices, showrooms, and residential spaces.",
-      },
-      {
-        id: "gypsum-partition",
-        name: "Gypsum Partition",
-        description:
-          "Smooth, sound-insulating gypsum partitions that provide aesthetic and functional room separation.",
-      },
-    ],
-  },
-
   doors: {
     title: "Doors",
     description:
@@ -206,4 +144,74 @@ export const servicesData = {
       },
     ],
   },
+
+  ceiling: {
+    title: "Ceiling",
+    description:
+      "Transform your space with high-end ceiling designs that enhance lighting, style, and acoustic comfort.",
+    subs: [
+      {
+        id: "gypsum-ceiling",
+        name: "Gypsum Ceiling",
+        description:
+          "Custom gypsum ceiling installations that elevate interiors with modern patterns and smooth finishes.",
+      },
+      {
+        id: "tv-wall",
+        name: "TV Wall",
+        description:
+          "Creative wall paneling solutions for TVs — blending design and functionality for modern interiors.",
+      },
+    ],
+  },
+  
+  partition: {
+    title: "Partition",
+    description:
+      "Our partition systems redefine spaces — creating privacy and flexibility while maintaining open, elegant designs.",
+    subs: [
+      {
+        id: "aluminium-partition",
+        name: "Aluminium Partition",
+        description:
+          "Durable and modern aluminium partitions for offices, showrooms, and residential spaces.",
+      },
+      {
+        id: "gypsum-partition",
+        name: "Gypsum Partition",
+        description:
+          "Smooth, sound-insulating gypsum partitions that provide aesthetic and functional room separation.",
+      },
+    ],
+  },
+
+  painting: {
+    title: "Painting",
+    description:
+      "We deliver professional painting services for both interiors and exteriors — enhancing your space with quality and precision.",
+    subs: [
+      {
+        id: "interior-painting",
+        name: "Interior Painting",
+        description:
+          "Premium interior painting using high-quality, low-odor paints to create smooth finishes and vibrant atmospheres.",
+      },
+      {
+        id: "exterior-painting",
+        name: "Exterior Painting",
+        description:
+          "Durable exterior coatings designed to protect your walls and maintain aesthetic appeal in all weather conditions.",
+      },
+    ],
+  },
+
+
+
+
+
+
+
+
+
+
 };
