@@ -10,8 +10,20 @@ const ProjectsPage = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  if (isLoading) return <p className="text-center py-10">Loading...</p>;
-  if (isError) return <p className="text-center text-red-500 py-10">{error?.data?.message || "Failed to load projects."}</p>;
+  if (isLoading) return (
+    <>
+    <Navbar />
+    <p className="text-center my-50 py-10">Loading...</p>
+    <Footer />
+    </>
+  );
+  if (isError) return (
+    <>
+    <Navbar />
+    <p className="text-center my-50 text-red-500 py-10">{error?.data?.message || "Failed to load projects."}</p>
+    <Footer />
+    </>
+  );
 
   const openModal = (project) => {
     setSelectedProject(project);
