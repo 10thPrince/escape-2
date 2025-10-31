@@ -3,6 +3,7 @@ import { useGetProjectsQuery } from "../slices/projectsApiSlice";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";
+import FloatingSocials from "../components/FloatingSocials";
 
 const ProjectsPage = () => {
   const { data: projects, isLoading, isError, error } = useGetProjectsQuery();
@@ -53,10 +54,10 @@ const ProjectsPage = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-
-      <section className="flex-1 bg-gray-50 py-16 px-6">
-        <div className="max-w-6xl mx-auto text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold mb-3">Our Projects</h2>
+      <FloatingSocials />
+      <section className="flex-1 bg-gray-50 py-16 my-20 px-6">
+        <div className="max-w-6xl mx-auto text-center my-15">
+          <h2 className="text-3xl md:text-4xl font-bold fugaz text-primary mb-3">Our Projects</h2>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">

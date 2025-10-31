@@ -8,6 +8,7 @@ import teamImg from '../assets/hero-bg.png';
 import interiorImg from '../assets/furniture.jpg'
 import founder from '../assets/founder.avif'
 import Footer from '../components/Footer';
+import FloatingSocials from '../components/FloatingSocials';
 
 
 const fadeInUp = {
@@ -56,6 +57,7 @@ const AboutUs = () => {
     return (
         <>
             <Navbar />
+            <FloatingSocials />
             <div className="w-full overflow-hidden">
                 {/* Hero Section */}
                 <motion.div
