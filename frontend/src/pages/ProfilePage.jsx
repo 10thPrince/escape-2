@@ -9,6 +9,7 @@ import { toast } from 'react-toastify';
 import { useUpdateUserMutation } from '../slices/userApiSlice';
 import Spinner from '../components/Spinner';
 import { setCredentials } from '../slices/authSlice';
+import { Button } from '@heroui/react';
 
 
 const ProfilePage = () => {
@@ -53,6 +54,9 @@ const ProfilePage = () => {
         <>
             <Navbar />
             <ToastContainer />
+            <div className='w-full justify-center text-center fugaz text-2xl'>
+                <h1 className='my-30'>Manage Your Profile</h1>
+            </div>
             <div className="flex justify-center items-center min-h-screen bg-gray-50">
 
                 <form
@@ -113,19 +117,29 @@ const ProfilePage = () => {
                             required
                         />
                     </div>
-                    {isLoading ? <Spinner /> : 
-                    <button
-                        type="submit"
-                        className="w-full bg-[#8B4513] text-white py-2 rounded-md hover:bg-[#6F3B10] transition"
-                    >
-                        Update
-                    </button>}
+                    {isLoading ? <Spinner /> :
+                        <button
+                            type="submit"
+                            className="w-full bg-[#8B4513] text-white py-2 rounded-md hover:bg-[#6F3B10] transition"
+                        >
+                            Update
+                        </button>}
 
 
 
 
                 </form>
             </div>
+
+            <div className='w-full justify-center text-center fugaz text-2xl'>
+                <h1 className='my-30'>Want a way out? <span className='text-glow'>Logout</span></h1>
+            </div>
+            <div className='my-20'>
+                <button className='bg-red-700 text-white text-xl font-bold p-4 rounded-lg w-[40%] cursor-pointer'>
+                    Logout
+                </button>
+            </div>
+
         </>
 
     )

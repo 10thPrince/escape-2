@@ -67,7 +67,7 @@ const ServicesPage = () => {
         </div>
 
 
-        <div className=" w-full md:w-3/4 overflow-y-auto max-h-[calc(100vh-100px)] pr-2">
+        <div className=" w-full md:w-3/4 overflow-y-auto hidden-scroll max-h-[calc(100vh-100px)] pr-2">
           <motion.div
             className="relative h-30 flex items-center justify-center text-center bg-cover bg-center"
             initial={{ opacity: 0 }}

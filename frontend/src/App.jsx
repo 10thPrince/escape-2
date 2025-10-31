@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
 import Home from './pages/Home'
 import LoginPage from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage'
@@ -11,11 +12,22 @@ import ServicesPage from './pages/ServicesPage'
 import AboutUs from './pages/AboutUs'
 import ContactPage from './pages/ContactPage'
 import ProjectsPage from './pages/ProjectsPage'
+import { useGetProfileMutation } from './slices/userApiSlice'
+import { setCredentials } from './slices/authSlice'
 
 
 
 function App() {
+  const dispatch = useDispatch();
+  const { data: user, isSuccess } = useGetProfileMutation(undefined, {
+    skip: !localStorage.getItem('userInfo'),
+  })
 
+  useEffect(()=>{
+    if(isSuccess && user){
+      dispatch(setCredentials(user));
+    }
+  }, [user, isSuccess, dispatch])
 
   return (
     <>
