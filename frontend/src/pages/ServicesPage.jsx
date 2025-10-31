@@ -8,6 +8,7 @@ import { Accordion, AccordionItem } from "@heroui/react";
 import { CheckCircle, Star, Clock } from 'lucide-react';
 import serviceImg from '../assets/hero-1.jpeg';
 import { motion } from "framer-motion";
+import FloatingSocials from "../components/FloatingSocials";
 
 
 const ServicesPage = () => {
@@ -39,11 +40,28 @@ const ServicesPage = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-
+      <FloatingSocials />
+      <motion.div
+        className="relative h-[80vh] flex items-center justify-center text-center bg-cover bg-center"
+        style={{ backgroundImage: `url(${serviceImg})` }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.2 }}
+      >
+        <div className="absolute inset-0 bg-black/40 bg-opacity-50"></div>
+        <motion.h1
+          className="relative text-white text-5xl fugaz md:text-6xl font-bold z-10"
+          initial={{ y: -40, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          Take a look about our <span className='text-glow'> {service.title}</span> Service
+        </motion.h1>
+      </motion.div>
       <div className="flex flex-row mx-auto min-h-[calc(100vh-70px)] px-6 py-30 w-full ">
         <div className="w-1/4 pr-8 hidden md:block ">
           <div className="sticky top-24 h-fit">
-            <Accordion selectionMode="multiple">
+            <Accordion selectionMode="single">
               {Object.entries(servicesData).map(([key, value]) => (
                 <AccordionItem key={key} aria-label={value.title} title={value.title}>
                   <ul className="space-y-2 pl-2">
