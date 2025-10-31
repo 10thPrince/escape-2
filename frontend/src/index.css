@@ -109,7 +109,14 @@ body{
   @apply relative;
   text-shadow: 0 0 10px rgba(165, 127, 47, 1);
 }
+.hidden-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 
+.hidden-scroll::-webkit-scrollbar {
+  display: hidden;
+}
 #root {
   max-width: 100%;
   margin: 0 auto;

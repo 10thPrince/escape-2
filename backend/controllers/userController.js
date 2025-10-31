@@ -98,13 +98,10 @@ export const logout = asyncHandler(async (req, res) => {
 // route GET /user/profile
 // @access Private
 export const getUserProfile = asyncHandler(async (req, res) => {
-    const user = {
-        _id: req.user._id,
-        name: req.user.name,
-        email: req.user.email,
-    }
+    const id = req.user._id;
+    const user = await User.findById(id).select("-password");
 
-    res.status(200).json({ user })
+    res.status(200).json( user );
 })
 
 // @desc Update user profile
