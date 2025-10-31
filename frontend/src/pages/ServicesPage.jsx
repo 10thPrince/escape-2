@@ -5,7 +5,9 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ServicesPreview from "../components/ServicesPreview";
 import { Accordion, AccordionItem } from "@heroui/react";
-import { CheckCircle, Star, Clock } from 'lucide-react'
+import { CheckCircle, Star, Clock } from 'lucide-react';
+import serviceImg from '../assets/hero-1.jpeg';
+import { motion } from "framer-motion";
 
 
 const ServicesPage = () => {
@@ -66,7 +68,22 @@ const ServicesPage = () => {
 
 
         <div className=" w-full md:w-3/4 overflow-y-auto max-h-[calc(100vh-100px)] pr-2">
-          <h1 className="text-4xl font-bold text-primary mb-10">{service.title}</h1>
+          <motion.div
+            className="relative h-30 flex items-center justify-center text-center bg-cover bg-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.2 }}
+          >
+            <motion.h1
+              className="relative text-black text-2xl fugaz md:text-3xl font-bold z-10"
+              initial={{ y: -40, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1 }}
+            >
+              <span className='text-glow'> {service.title}</span>
+            </motion.h1>
+          </motion.div>
+
           <div className="space-y-16">
             {service.subs.map((sub) => (
               <section
@@ -88,7 +105,7 @@ const ServicesPage = () => {
                         key={i}
                         src={img}
                         alt={`${sub.name} ${i + 1}`}
-                        className="w-80 h-56 object-cover mx-auto items-center rounded-lg shadow-md snap-center flex-shrink-0"
+                        className="w-80 h-56 object-cover mx-auto items-center rounded-md shadow-md snap-center flex-shrink-0"
                       />
                     ))}
                   </div>

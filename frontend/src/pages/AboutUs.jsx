@@ -98,7 +98,7 @@ const AboutUs = () => {
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 1 }}
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold">Our Core Values</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold fugaz">Our Core Values</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto px-6">
                         {[
                             {
@@ -129,7 +129,7 @@ const AboutUs = () => {
 
                 <section className="py-20 px-6 md:px-20 bg-gray-50">
                     <motion.h2
-                        className="text-3xl font-semibold text-center mb-12"
+                        className="text-3xl fugaz font-semibold text-center mb-12"
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
@@ -148,7 +148,7 @@ const AboutUs = () => {
 
                 <section className="bg-primary text-white py-16 text-center">
                     <motion.h2
-                        className="text-3xl font-bold mb-4"
+                        className="text-3xl fugaz font-bold mb-4"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
