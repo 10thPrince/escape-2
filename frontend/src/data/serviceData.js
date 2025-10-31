@@ -18,7 +18,7 @@ export const servicesData = {
         name: "Laminate",
         description:
           "Elegant, scratch-resistant laminate flooring that mimics the beauty of wood while offering unmatched durability and easy maintenance.",
-        images: [livingRoomImg, decorImg, kitchenImg, doorDesignImg],
+        images: [livingRoomImg, decorImg, kitchenImg],
       },
       {
         id: "spc-water-proof",

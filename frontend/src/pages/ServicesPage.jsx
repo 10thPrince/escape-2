@@ -5,6 +5,8 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ServicesPreview from "../components/ServicesPreview";
 import { Accordion, AccordionItem } from "@heroui/react";
+import { CheckCircle, Star, Clock } from 'lucide-react'
+
 
 const ServicesPage = () => {
   const { serviceName, subName } = useParams();
@@ -37,7 +39,7 @@ const ServicesPage = () => {
       <Navbar />
 
       <div className="flex flex-row mx-auto min-h-[calc(100vh-70px)] px-6 py-30 w-full ">
-        <div className="w-1/4 pr-8">
+        <div className="w-1/4 pr-8 hidden md:block ">
           <div className="sticky top-24 h-fit">
             <Accordion selectionMode="multiple">
               {Object.entries(servicesData).map(([key, value]) => (
@@ -63,7 +65,7 @@ const ServicesPage = () => {
         </div>
 
 
-        <div className="w-3/4 overflow-y-auto max-h-[calc(100vh-100px)] pr-2">
+        <div className=" w-full md:w-3/4 overflow-y-auto max-h-[calc(100vh-100px)] pr-2">
           <h1 className="text-4xl font-bold text-primary mb-10">{service.title}</h1>
           <div className="space-y-16">
             {service.subs.map((sub) => (
@@ -73,26 +75,60 @@ const ServicesPage = () => {
                 className="scroll-mt-35"
               >
                 <h2
-                  className="text-2xl font-semibold text-gray-800 p-8 m-4"
+                  className="text-2xl fugaz  font-semibold text-gray-800 p-8 m-4"
                   id={sub.id}
                 >
                   {sub.name}
                 </h2>
                 <p className="text-gray-600">{sub.description}</p>
                 {sub.images && sub.images.length > 0 && (
-                  <div className="flex overflow-x-auto gap-4 snap-x scroll-smooth pb-2">
+                  <div className="grid my-5 items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {sub.images.map((img, i) => (
                       <img
                         key={i}
                         src={img}
                         alt={`${sub.name} ${i + 1}`}
-                        className="w-80 h-56 object-cover rounded-lg shadow-md snap-center flex-shrink-0"
+                        className="w-80 h-56 object-cover mx-auto items-center rounded-lg shadow-md snap-center flex-shrink-0"
                       />
                     ))}
                   </div>
                 )}
               </section>
             ))}
+          </div>
+        </div>
+
+
+      </div>
+      <div className="w-full bg-gray-100">
+        <div className="my-20">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 fugaz text-center">
+            Why Choose Our {service.title} Service
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="flex flex-col items-center text-center p-6 rounded-2xl shadow-md hover:shadow-lg transition">
+              <CheckCircle className="w-12 h-12 text-primary mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Trusted Expertise</h3>
+              <p className="text-gray-600">
+                Our team of skilled professionals delivers high-quality and reliable {service.title.toLowerCase()} solutions that exceed expectations.
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center text-center p-6 rounded-2xl shadow-md hover:shadow-lg transition">
+              <Star className="w-12 h-12 text-primary mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Premium Quality</h3>
+              <p className="text-gray-600">
+                We use the finest materials and modern techniques to ensure every project stands out for durability and design.
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center text-center p-6 rounded-2xl shadow-md hover:shadow-lg transition">
+              <Clock className="w-12 h-12 text-primary mb-4" />
+              <h3 className="text-xl font-semibold mb-2">On-Time Delivery</h3>
+              <p className="text-gray-600">
+                We value your time — every project is completed on schedule without compromising quality or attention to detail.
+              </p>
+            </div>
           </div>
         </div>
       </div>
