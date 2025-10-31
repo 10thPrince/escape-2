@@ -47,13 +47,13 @@ const ServicesPage = () => {
                       <li key={sub.id} >
                         <Link
                           to={`/services/${key}/${sub.id}`}
-                          className={`block text-start text-gray-700 hover:text-primary underline ${
-                            subName === sub.id ? "font-semibold text-primary" : ""
-                          }`}
+                          className={`block text-start text-gray-700 hover:text-primary underline ${subName === sub.id ? "font-semibold text-primary" : ""
+                            }`}
                         >
                           {sub.name}
                         </Link>
                       </li>
+
                     ))}
                   </ul>
                 </AccordionItem>
@@ -62,7 +62,7 @@ const ServicesPage = () => {
           </div>
         </div>
 
-        
+
         <div className="w-3/4 overflow-y-auto max-h-[calc(100vh-100px)] pr-2">
           <h1 className="text-4xl font-bold text-primary mb-10">{service.title}</h1>
           <div className="space-y-16">
@@ -79,6 +79,18 @@ const ServicesPage = () => {
                   {sub.name}
                 </h2>
                 <p className="text-gray-600">{sub.description}</p>
+                {sub.images && sub.images.length > 0 && (
+                  <div className="flex overflow-x-auto gap-4 snap-x scroll-smooth pb-2">
+                    {sub.images.map((img, i) => (
+                      <img
+                        key={i}
+                        src={img}
+                        alt={`${sub.name} ${i + 1}`}
+                        className="w-80 h-56 object-cover rounded-lg shadow-md snap-center flex-shrink-0"
+                      />
+                    ))}
+                  </div>
+                )}
               </section>
             ))}
           </div>
