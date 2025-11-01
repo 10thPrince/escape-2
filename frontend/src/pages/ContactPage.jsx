@@ -87,7 +87,7 @@ const ContactPage = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
           >
-            <h2 className="text-4xl font-bold text-primary mb-4">
+            <h2 className="text-4xl font-bold text-primary fugaz mb-4">
               Get in Touch
             </h2>
             <p className="text-gray-700 text-lg">
@@ -103,7 +103,7 @@ const ContactPage = () => {
                 <div>
                   <h4 className="font-semibold text-start">Email</h4>
                   <a
-                    href="mailto:ntwariprinceh@gmail.com"
+                    href="mailto:info@escapeltd.com"
                     className="text-gray-600 hover:text-primary"
                   >
                     info@escapeltd.com
@@ -118,7 +118,7 @@ const ContactPage = () => {
                 <div>
                   <h4 className="font-semibold text-start">Phone</h4>
                   <a
-                    href="tel:+250795884650"
+                    href="tel:+250783728119"
                     className="text-gray-600 hover:text-primary"
                   >
                     +250 783 728 119
@@ -175,7 +175,7 @@ const ContactPage = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
           >
-            <h3 className="text-2xl font-semibold mb-6 text-primary">
+            <h3 className="text-2xl fugaz font-semibold mb-6 text-primary">
               Send a Message
             </h3>
 

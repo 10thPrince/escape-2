@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Menu, X, ChevronDown, MapPin, User } from "lucide-react";
+import { Menu, X, ChevronDown, MapPin, User, Phone, PhoneCall } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../slices/authSlice";
@@ -14,17 +14,8 @@ const Navbar = () => {
   const { userInfo } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [logoutApiCall] = useLogoutMutation();
 
-  const handleLogout = async () => {
-    try {
-      await logoutApiCall().unwrap();
-      dispatch(logout());
-      navigate("/login");
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  const handleLinkClick = () => setIsOpen(false);
 
   // Convert object to array for mapping
   const servicesArray = Object.values(servicesData);
@@ -52,12 +43,13 @@ const Navbar = () => {
             {dropdownOpen && (
               <div
                 onMouseLeave={() => setDropdownOpen(false)}
-                className="absolute left-1/2 top-full -translate-x-[25%] mt-3 bg-white shadow-2xl rounded-lg p-6 w-[1000px] border border-gray-100 grid grid-cols-4 gap-6 transition-all duration-200"
+                className="absolute left-0 top-10 -translate-x-[30%] mt-3 bg-white shadow-2xl rounded-lg p-6 w-screen border border-gray-100 grid grid-cols-4 gap-6 transition-all duration-200"
               >
                 {servicesArray.map((service, index) => (
                   <div key={index}>
                     <div className="text-start">
                       <Link
+                        onClick={() => setDropdownOpen(false)}
                         to={`/services/${service.title.toLowerCase().replace(/\s+/g, "-")}`}
                         className="font-semibold text-lg text-gray-800 hover:text-primary transition-colors"
                       >
@@ -69,6 +61,7 @@ const Navbar = () => {
                       {service.subs.map((sub) => (
                         <li key={sub.id}>
                           <Link
+                            onClick={() => setDropdownOpen(false)}
                             to={`/services/${service.title
                               .toLowerCase()
                               .replace(/\s+/g, "-")}/${sub.id}`}
@@ -96,26 +89,35 @@ const Navbar = () => {
           </Link>
         </ul>
 
-        {/* Right Buttons */}
-        {userInfo ? (
-          <div className="hidden md:block">
-            <Link
-              to="/profile"
-              className="flex gap-x-2 items-center underline text-black px-5 py-2 rounded-sm hover:bg-primary hover:text-white transition-colors"
-            >
-              <User /> Manage Profile
-            </Link>
-          </div>
-        ) : (
-          <div className="hidden md:block">
-            <a
-              href="#footer"
-              className="flex gap-x-2 items-center underline text-black px-5 py-2 rounded-sm hover:bg-primary hover:text-white transition-colors"
-            >
-              <MapPin /> Our Location
+
+        <div className="flex flex-row gap-x-5 justify-center items-center">
+          {/* Right Buttons */}
+          {userInfo ? (
+            <div className="hidden md:block">
+              <Link
+                to="/profile"
+                className="flex gap-x-2 items-center underline text-black px-5 py-2 rounded-sm hover:bg-primary hover:text-white transition-colors"
+              >
+                <User /> Manage Profile
+              </Link>
+            </div>
+          ) : (
+            <div className="hidden md:block">
+              <a
+                href="#footer"
+                className="flex gap-x-2 items-center px-5 py-2 border border-primary text-primary rounded-md hover:bg-primary hover:text-white transition-all duration-300"
+              >
+                <MapPin size={20} /> Our Location
+              </a>
+            </div>
+          )}
+          <div>
+            <a href="tel:+250783728119" className=" flex-row hover:text-primary/70  text-primary hidden md:flex md:gap-2 underline">
+              <Phone size={22} /> Call us
             </a>
           </div>
-        )}
+        </div>
+
 
         {/* Hamburger Icon (Mobile) */}
         <button onClick={() => setIsOpen(!isOpen)} className="md:hidden focus:outline-none">
@@ -125,53 +127,81 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white shadow-md border-t border-gray-100">
-          <ul className="flex flex-col items-center space-y-4 py-4 text-gray-700 font-medium">
-            <details className="w-full text-center">
-              <summary className="cursor-pointer hover:text-primary">Our Services</summary>
-              <div className="grid grid-cols-2 gap-4 mt-2">
+        <div className="md:hidden bg-white shadow-lg border-t border-gray-200 rounded-b-2xl animate-slideDown">
+          <ul className="flex flex-col items-center space-y-5 py-5 text-gray-800 font-medium">
+
+            {/* OUR SERVICES DROPDOWN */}
+            <details className="w-full text-center group">
+              <summary className="cursor-pointer text-lg font-semibold hover:text-primary transition-colors duration-200">
+                Our Services
+              </summary>
+              <div className="grid grid-cols-3 gap-4 mt-3 px-6 text-left">
                 {servicesArray.map((service) => (
                   <div key={service.title}>
-                    <p className="font-semibold">{service.title}</p>
-                    <ul>
+                    <Link
+                      onClick={() => handleLinkClick()}
+                      to={`/services/${service.title.toLowerCase().replace(/\s+/g, "-")}`}
+                      className="font-semibold underline text-lg text-gray-800 hover:text-primary transition-colors"
+                    >
+                      {service.title}
+                    </Link>
+                    {/* <ul className="space-y-1">
                       {service.subs.map((sub) => (
                         <li key={sub.id}>
                           <Link
                             to={`/services/${service.title.toLowerCase().replace(/\s+/g, "-")}/${sub.id}`}
-                            className="block text-gray-600 hover:text-primary"
+                            className="block text-gray-600 hover:text-primary transition-colors duration-200"
                           >
                             {sub.name}
                           </Link>
                         </li>
                       ))}
-                    </ul>
+                    </ul> */}
                   </div>
                 ))}
               </div>
             </details>
 
-            <Link to="/about" className="hover:text-primary">About Us</Link>
-            <Link to="/contact" className="hover:text-primary">Contact Us</Link>
-            <Link to="/projects" className="hover:text-primary">Projects</Link>
+            {/* NAVIGATION LINKS */}
+            <div className="flex flex-col items-center space-y-2 text-base">
+              <Link to="/about" onClick={() => handleLinkClick()} className="hover:text-primary transition-colors">About Us</Link>
+              <Link to="/contact" onClick={() => handleLinkClick()} className="hover:text-primary transition-colors">Contact Us</Link>
+              <Link to="/projects" onClick={() => handleLinkClick()} className="hover:text-primary transition-colors">Projects</Link>
+            </div>
 
+            {/* PROFILE / LOCATION */}
             {userInfo ? (
               <Link
+                onClick={() => handleLinkClick()}
                 to="/profile"
-                className="flex gap-x-2 items-center px-5 py-2 hover:bg-primary hover:text-white rounded-sm transition-colors"
+                className="flex gap-x-2 items-center px-5 py-2 bg-primary text-white rounded-md shadow-md hover:bg-primary/90 transition-all duration-300"
               >
-                <User /> Manage Profile
+                <User size={20} /> Manage Profile
               </Link>
             ) : (
-              <Link
-                to="#footer"
-                className="flex gap-x-2 items-center px-5 py-2 hover:bg-primary hover:text-white rounded-sm transition-colors"
+              <a
+                onClick={() => handleLinkClick()}
+                href="#footer"
+                className="flex gap-x-2 items-center px-5 py-2 border border-primary text-primary rounded-md hover:bg-primary hover:text-white transition-all duration-300"
               >
-                <MapPin /> Our Location
-              </Link>
+                <MapPin size={20} /> Our Location
+              </a>
             )}
+
+            {/* CALL BUTTON */}
+            <div className="mt-2">
+              <a
+                href="tel:+250783728119"
+                className="flex items-center gap-2 text-base font-semibold text-primary hover:text-primary/80 transition-colors"
+              >
+                <Phone size={22} /> Call Us
+              </a>
+            </div>
           </ul>
         </div>
       )}
+
+
     </nav>
   );
 };

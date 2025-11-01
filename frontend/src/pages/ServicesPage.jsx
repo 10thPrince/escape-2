@@ -55,11 +55,11 @@ const ServicesPage = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          Take a look about our <span className='text-glow'> {service.title}</span> Service
+          Take a look at our <span className='text-glow'> {service.title}</span> Service
         </motion.h1>
       </motion.div>
-      <div className="flex flex-row mx-auto min-h-[calc(100vh-70px)] px-6 py-30 w-full ">
-        <div className="w-1/4 pr-8 hidden md:block ">
+      <div className="flex flex-row mx-auto min-h-[calc(100vh-70px)] w-full ">
+        <div className="w-1/4 pr-8 hidden md:block font-bold px-6 text-white text-xl bg-primary">
           <div className="sticky top-24 h-fit">
             <Accordion selectionMode="single">
               {Object.entries(servicesData).map(([key, value]) => (
@@ -69,7 +69,7 @@ const ServicesPage = () => {
                       <li key={sub.id} >
                         <Link
                           to={`/services/${key}/${sub.id}`}
-                          className={`block text-start text-gray-700 hover:text-primary underline ${subName === sub.id ? "font-semibold text-primary" : ""
+                          className={`block text-start text-gray-700 hover:text-black underline ${subName === sub.id ? "font-semibold text-white" : ""
                             }`}
                         >
                           {sub.name}
@@ -85,7 +85,7 @@ const ServicesPage = () => {
         </div>
 
 
-        <div className=" w-full md:w-3/4 overflow-y-auto hidden-scroll max-h-[calc(100vh-100px)] pr-2">
+        <div className=" w-full md:w-3/4 overflow-y-auto hidden-scroll px-5 max-h-[calc(100vh-100px)] pr-2">
           <motion.div
             className="relative h-30 flex items-center justify-center text-center bg-cover bg-center"
             initial={{ opacity: 0 }}
@@ -98,7 +98,7 @@ const ServicesPage = () => {
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1 }}
             >
-              <span className='text-glow'> {service.title}</span>
+              <span className='text-primary text-4xl'> {service.title}</span>
             </motion.h1>
           </motion.div>
 
@@ -117,14 +117,24 @@ const ServicesPage = () => {
                 </h2>
                 <p className="text-gray-600">{sub.description}</p>
                 {sub.images && sub.images.length > 0 && (
-                  <div className="grid my-5 items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <div className="grid my-5 items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {sub.images.map((img, i) => (
-                      <img
-                        key={i}
-                        src={img}
-                        alt={`${sub.name} ${i + 1}`}
-                        className="w-80 h-56 object-cover mx-auto items-center rounded-md shadow-md snap-center flex-shrink-0"
-                      />
+                      <div className="flex flex-col bg-white text-center border-b-1 border-gray-300  p-2">
+                        <img
+                          key={i}
+                          src={img.url}
+                          alt={img.title || `${sub.name} ${i + 1}`}
+                          className="w-80 h-56 object-cover mx-auto items-center rounded-md shadow-md snap-center flex-shrink-0"
+                        />
+                        <p className="text-md my-3 mx-2 text-gray-500">
+                          {img.description || "A beautifull example of our work."}
+                        </p>
+                        <h3 className="text-lg mx-2 font-bold text-center">
+                          {img.title || `Image ${i + 1}`}
+                        </h3>
+                        
+                      </div>
+
                     ))}
                   </div>
                 )}

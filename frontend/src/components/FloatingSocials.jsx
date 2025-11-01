@@ -1,14 +1,23 @@
 import { motion } from "framer-motion";
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Phone, Twitter } from "lucide-react";
 
 const FloatingSocials = () => {
   return (
     <motion.div
-      className="fixed bottom-6 left-6 z-50 flex flex-col items-center space-y-3 bg-[#1a1a1a]/80 backdrop-blur-md p-3 rounded-full shadow-lg"
+      className="fixed bottom-6 left-6 z-50 flex flex-col items-center space-y-1 bg-[#1a1a1a]/80 backdrop-blur-md p-3 rounded-full shadow-lg"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
+      {/* Phone */}
+      <a
+        href="tel:+250783728119"
+        target="_blank"
+        rel="noreferrer"
+        className="p-2 text-gray-300 hover:text-primary transition"
+      >
+        <Phone size={22} />
+      </a>
       {/* LinkedIn */}
       <a
         href="https://linkedin.com"
@@ -40,14 +49,14 @@ const FloatingSocials = () => {
       </a>
 
       {/* Facebook */}
-      <a
+      {/* <a
         href="https://facebook.com"
         target="_blank"
         rel="noreferrer"
         className="p-2 text-gray-300 hover:text-primary transition"
       >
         <Facebook size={22} />
-      </a>
+      </a> */}
     </motion.div>
   );
 };
