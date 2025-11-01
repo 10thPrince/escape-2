@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ServicesPreview from "../components/ServicesPreview";
 import { Accordion, AccordionItem } from "@heroui/react";
-import { CheckCircle, Star, Clock } from 'lucide-react';
+import { CheckCircle, Star, Clock, Phone } from 'lucide-react';
 import serviceImg from '../assets/hero-1.jpeg';
 import { motion } from "framer-motion";
 import FloatingSocials from "../components/FloatingSocials";
@@ -129,10 +129,15 @@ const ServicesPage = () => {
                         <p className="text-md my-3 mx-2 text-gray-500">
                           {img.description || "A beautifull example of our work."}
                         </p>
-                        <h3 className="text-lg mx-2 font-bold text-center">
-                          {img.title || `Image ${i + 1}`}
-                        </h3>
-                        
+                        <div className="flex flex-row justify-between">
+                          <h3 className="text-lg mx-2 font-bold text-center">
+                            {img.title || `Image ${i + 1}`}
+                          </h3>
+                          <a href="tel:+250783728119" className="text-primary">
+                            <Phone size={17}/>
+                          </a>
+                        </div>
+
                       </div>
 
                     ))}

@@ -43,7 +43,7 @@ const Navbar = () => {
             {dropdownOpen && (
               <div
                 onMouseLeave={() => setDropdownOpen(false)}
-                className="absolute left-0 top-10 -translate-x-[30%] mt-3 bg-white shadow-2xl rounded-lg p-6 w-screen border border-gray-100 grid grid-cols-4 gap-6 transition-all duration-200"
+                className="absolute left-0 top-10 -translate-x-[27.3%] mt-3 bg-white shadow-2xl rounded-lg p-6 w-screen border border-gray-100 grid grid-cols-4 gap-6 transition-all duration-200"
               >
                 {servicesArray.map((service, index) => (
                   <div key={index}>

@@ -3,6 +3,18 @@ import decorImg from "../assets/hero-1.jpeg";
 import oakLaminate from '../assets/services-img/laminate/Oak-laminate-flooring.jpg'
 import walnutLaminate from '../assets/services-img/laminate/dark-walnut.webp'
 import greyLaminate from '../assets/services-img/laminate/grey-laminate1.webp'
+import woodSPC from '../assets/services-img/spc/wood.webp'
+import stoneSPC from '../assets/services-img/spc/stone.jpeg'
+import marbleSPC from '../assets/services-img/spc/marble.jpg'
+import wpc from '../assets/services-img/decking/wpc.avif'
+import pvc from '../assets/services-img/decking/pvDecking.webp'
+import bamboo from '../assets/services-img/decking/bamboo.webp'
+import walnutEW from '../assets/services-img/engineered-w/walnut.webp'
+import oakEW from '../assets/services-img/engineered-w/oak.webp'
+import mapleEW from '../assets/services-img/engineered-w/maple.webp'
+import cloth from '../assets/services-img/cleaning/cloth.webp'
+import mop from '../assets/services-img/cleaning/mop.webp'
+import spray from '../assets/services-img/cleaning/spray.webp'
 
 
 
@@ -42,19 +54,19 @@ export const servicesData = {
           "Stone Plastic Composite flooring with watertight technology, ideal for moisture-prone areas like kitchens and bathrooms.",
         images: [
           {
-            url: walnutLaminate,
-            title: 'Walnut Laminate Flooring',
-            description: "Dark, rich color that adds a touch of luxury and modern style."
+            url: stoneSPC,
+            title: 'Stone Texture SPC Flooring',
+            description: "Looks like natural stone but is 100% waterproof and easy to clean."
           },
           {
-            url: oakLaminate,
-            title: 'Oak Laminate Flooring',
-            description: "Mimics natural oak wood, giving your room a warm and classic look."
+            url: woodSPC,
+            title: 'Wood Grain SPC Flooring',
+            description: "Mimics real wood while being strong and water-resistant — perfect for kitchens or bathrooms."
           },
           {
-            url: greyLaminate,
-            title: 'Grey Laminate Flooring',
-            description: "A trendy, neutral tone that fits perfectly with modern interiors."
+            url: marbleSPC,
+            title: 'Marble Design SPC Flooring',
+            description: "Elegant marble look without the high cost or maintenance."
           },
         ],
       },
@@ -65,19 +77,19 @@ export const servicesData = {
           "Stylish outdoor decking made from long-lasting materials, designed to withstand weather conditions while maintaining beauty.",
         images: [
           {
-            url: walnutLaminate,
-            title: 'Walnut Laminate Flooring',
-            description: "Dark, rich color that adds a touch of luxury and modern style."
+            url: wpc,
+            title: 'Wood Plastic Composite (WPC) Decking',
+            description: "Durable outdoor flooring made from recycled wood and plastic."
           },
           {
-            url: oakLaminate,
-            title: 'Oak Laminate Flooring',
-            description: "Mimics natural oak wood, giving your room a warm and classic look."
+            url: bamboo,
+            title: 'Bamboo Decking',
+            description: "Eco-friendly and stylish, ideal for patios or garden walkways."
           },
           {
-            url: greyLaminate,
-            title: 'Grey Laminate Flooring',
-            description: "A trendy, neutral tone that fits perfectly with modern interiors."
+            url: pvc,
+            title: 'PVC Decking',
+            description: "Lightweight and water-resistant, great for pool areas and balconies."
           },
         ],
       },
@@ -88,19 +100,19 @@ export const servicesData = {
           "Premium engineered wood floors combining natural aesthetics with high structural stability and resilience.",
         images: [
           {
-            url: walnutLaminate,
-            title: 'Walnut Laminate Flooring',
-            description: "Dark, rich color that adds a touch of luxury and modern style."
+            url: oakEW,
+            title: 'Oak Engineered Wood',
+            description: "Real oak top layer for a natural look, stable and durable."
           },
           {
-            url: oakLaminate,
-            title: 'Oak Laminate Flooring',
-            description: "Mimics natural oak wood, giving your room a warm and classic look."
+            url: mapleEW,
+            title: 'Maple Engineered Wood',
+            description: "Smooth, light-colored finish that brightens up any room."
           },
           {
-            url: greyLaminate,
-            title: 'Grey Laminate Flooring',
-            description: "A trendy, neutral tone that fits perfectly with modern interiors."
+            url: walnutEW,
+            title: 'Walnut Engineered Wood',
+            description: "Dark, rich tone that adds elegance and warmth to interiors."
           },
         ],
       },
@@ -111,19 +123,19 @@ export const servicesData = {
           "Specialized cleaning and care kits designed to preserve the natural finish and shine of your wooden floors.",
         images: [
           {
-            url: walnutLaminate,
-            title: 'Walnut Laminate Flooring',
-            description: "Dark, rich color that adds a touch of luxury and modern style."
+            url: spray,
+            title: 'Wood Floor Cleaner Spray',
+            description: "Quick and safe cleaning for wood surfaces."
           },
           {
-            url: oakLaminate,
-            title: 'Oak Laminate Flooring',
-            description: "Mimics natural oak wood, giving your room a warm and classic look."
+            url: mop,
+            title: 'Microfiber Mop Kit',
+            description: "Gentle mop that traps dust without scratching."
           },
           {
-            url: greyLaminate,
-            title: 'Grey Laminate Flooring',
-            description: "A trendy, neutral tone that fits perfectly with modern interiors."
+            url: cloth,
+            title: 'Polishing Cloth Set',
+            description: "Shine and maintain floors easily."
           },
         ],
       },
