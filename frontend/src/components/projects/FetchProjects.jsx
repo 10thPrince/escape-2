@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { useGetProjectsQuery } from "../../slices/projectsApiSlice";
+import { useDeleteProjectMutation, useGetProjectsQuery } from "../../slices/projectsApiSlice";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { motion } from "framer-motion";
+import { useSelector } from "react-redux";
 
 const FetchProjects = () => {
 
@@ -10,6 +11,8 @@ const FetchProjects = () => {
     const [modalOpen, setModalOpen] = useState(false);
     const [selectedProject, setSelectedProject] = useState(null);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [deleteProject] = useDeleteProjectMutation();
+    const {userInfo} = useSelector((state) => state.auth)
 
     if (isLoading) return (
         <>
@@ -22,6 +25,20 @@ const FetchProjects = () => {
             
         </>
     );
+
+    const handleDelete = async(id) => {
+        if(window.confirm('Are ypu sure you want to delete this Project?')){
+            try {
+                await deleteProject(id).wrap();
+                alert('Project deleted successful');
+            } catch (error) {
+                console.error(error);
+                alert('Failed to delete Project');
+            }
+        }else{
+
+        }
+    }
 
     const openModal = (project) => {
         setSelectedProject(project);
@@ -76,6 +93,11 @@ const FetchProjects = () => {
                                 <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
                                 <p className="text-gray-600 text-sm">{project.description}</p>
                             </div>
+                            {userInfo ? (<buttton onClick={() => handleDelete(project._id)}
+                                className="bg-red-500 text-white py-1 px-3 rounded mt-2 hover:bg-red-600"
+                            >
+                                Delete
+                            </buttton>) : (<></>)}
                         </motion.div>
                     ))}
                 </div>
