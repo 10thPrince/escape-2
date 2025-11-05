@@ -60,3 +60,27 @@ export const getAllProjects = asyncHandler(async(req, res) => {
 
     res.status(200).json(projects);
 })
+
+//@Desc Delete a Project
+//@route DELETE /api/projects/:id
+//@access Private
+export const deleteProject = asyncHandler(async(req, res) => {
+    const {id} = req.params;
+
+    const project = Projects.findById(id);
+
+    if(!project){
+        res.status(400).json({success: false, message: 'Project not found!'})
+    }
+
+    //delete image from cloudinary if available
+    if(project.cloudinaryData && project.cloudinaryData.length > 0){
+        for(const img of project.cloudinaryData){
+            await cloudinary.uploader.destroy(img.public_id);
+        }
+    }
+
+    await Projects.findByIdAndDelete(id);
+
+    res.status(200).json({success: true, message: 'Project Deleted Successfull!'});
+})

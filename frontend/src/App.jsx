@@ -7,13 +7,13 @@ import RegisterPage from './pages/RegisterPage'
 import NotFound from './pages/NotFound'
 import ProfilePage from './pages/ProfilePage'
 import PrivateRoute from './components/PrivateRoute'
-import AddProject from './components/projects/AddProject'
 import ServicesPage from './pages/ServicesPage'
 import AboutUs from './pages/AboutUs'
 import ContactPage from './pages/ContactPage'
 import ProjectsPage from './pages/ProjectsPage'
 import { useGetProfileMutation } from './slices/userApiSlice'
 import { setCredentials } from './slices/authSlice'
+import ManageWeb from './pages/ManageWeb'
 
 
 
@@ -46,7 +46,7 @@ function App() {
           {/* Private Routes */}
           <Route path='' element={<PrivateRoute />}>
             <Route path='/profile' element={<ProfilePage />} />
-            <Route path='/addProject' element={<AddProject />} />
+            <Route path='/addProject' element={<ManageWeb />} />
           </Route>
         </Routes>
       </BrowserRouter>
