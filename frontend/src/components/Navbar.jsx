@@ -11,7 +11,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
-  const { userInfo } = useSelector((state) => state.auth);
+  const { userInfo } = useSelector((state) => state.auth); 
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -95,10 +95,10 @@ const Navbar = () => {
           {userInfo ? (
             <div className="hidden md:block">
               <Link
-                to="/profile"
+                to="/addProject"
                 className="flex gap-x-2 items-center underline text-black px-5 py-2 rounded-sm hover:bg-primary hover:text-white transition-colors"
               >
-                <User /> Manage Profile
+                <User /> Manage Web
               </Link>
             </div>
           ) : (

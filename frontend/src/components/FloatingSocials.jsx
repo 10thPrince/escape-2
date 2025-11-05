@@ -4,7 +4,7 @@ import { Facebook, Instagram, Linkedin, Phone, Twitter } from "lucide-react";
 const FloatingSocials = () => {
   return (
     <motion.div
-      className="fixed bottom-6 left-6 z-50 flex flex-col items-center space-y-1 bg-[#1a1a1a]/80 backdrop-blur-md p-3 rounded-full shadow-lg"
+      className="fixed bottom-6 left-6 z-50 flex flex-col items-center space-y-1 bg-[#1a1a1a]/80 backdrop-blur-md p-1 md:p-3 rounded-full shadow-lg"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}

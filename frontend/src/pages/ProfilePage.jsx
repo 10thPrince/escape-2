@@ -1,22 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Spinner from "../components/Spinner";
 import { useLogoutMutation, useUpdateUserMutation } from "../slices/userApiSlice";
 import { setCredentials, logout } from "../slices/authSlice";
-import {
-  Modal,
-  ModalContent,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  Button,
-  useDisclosure,
-  useDraggable,
-} from "@heroui/react";
+import Modal  from "../components/Modal";
+import Footer from "../components/Footer";
 
 const ProfilePage = () => {
   const [name, setName] = useState("");
@@ -31,14 +23,8 @@ const ProfilePage = () => {
   const [logoutApiCall] = useLogoutMutation();
   const [updateProfile, { isLoading }] = useUpdateUserMutation();
 
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const [isOpen, setIsOpen] = useState(false);
   const targetRef = useRef(null);
-  const { moveProps } = useDraggable({
-    targetRef,
-    canOverflow: true,
-    isDisabled: !isOpen,
-  });
-
   // ✅ Fix: use correct dependency array
   useEffect(() => {
     if (userInfo) {
@@ -89,7 +75,8 @@ const ProfilePage = () => {
     <>
       <Navbar />
       <ToastContainer />
-      <div className="w-full text-center fugaz text-2xl mt-24">
+
+      <div className="w-full text-center fugaz text-2xl mt-30">
         <h1>Manage Your Profile</h1>
       </div>
 
@@ -161,46 +148,46 @@ const ProfilePage = () => {
       </div>
 
       {/* Logout Section */}
-      <div className="text-center mt-10">
+      <div className="text-center my-15 gap-y-3">
         <h1 className="text-2xl mb-6">
           Want a way out? <span className="text-[#8B4513] font-bold">Logout</span>
         </h1>
 
-        <Button
-          onPress={onOpen}
-          className="bg-red-700 text-white text-lg font-bold px-8 py-3 rounded-lg hover:bg-red-800"
+        <button
+          onClick={() => setIsOpen(true)}
+          className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition"
         >
           Logout
-        </Button>
+        </button>
       </div>
 
-      {/* Logout Modal */}
-      <Modal ref={targetRef} isOpen={isOpen} onOpenChange={onOpenChange}>
-        <ModalContent>
-          {(onClose) => (
-            <>
-              <ModalHeader {...moveProps}>Confirm Logout</ModalHeader>
-              <ModalBody>
-                <p>Are you sure you want to logout?</p>
-              </ModalBody>
-              <ModalFooter>
-                <Button color="default" variant="light" onPress={onClose}>
-                  Cancel
-                </Button>
-                <Button
-                  color="danger"
-                  onPress={() => {
-                    handleLogout();
-                    onClose();
-                  }}
-                >
-                  Logout
-                </Button>
-              </ModalFooter>
-            </>
-          )}
-        </ModalContent>
+
+      <Modal
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+        title="Logout"
+      >
+        <p className="text-gray-600 dark:text-gray-300 mb-4">
+          Are you sure you want to Logout?
+        </p>
+        <div className="flex justify-end space-x-3">
+          <button
+            onClick={() => setIsOpen(false)}
+            className="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-md"
+          >
+            Cancel
+          </button>
+          <button
+            onClick={handleLogout}
+            className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700"
+          >
+            Logout
+          </button>
+        </div>
       </Modal>
+
+      <Footer />
+
     </>
   );
 };
