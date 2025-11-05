@@ -4,6 +4,7 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
+import { toast } from "react-toastify";
 
 const FetchProjects = () => {
 
@@ -30,10 +31,10 @@ const FetchProjects = () => {
         if(window.confirm('Are ypu sure you want to delete this Project?')){
             try {
                 await deleteProject(id).wrap();
-                alert('Project deleted successful');
+                toast('Project deleted successful');
             } catch (error) {
                 console.error(error);
-                alert('Failed to delete Project');
+                toast('Failed to delete Project');
             }
         }else{
 

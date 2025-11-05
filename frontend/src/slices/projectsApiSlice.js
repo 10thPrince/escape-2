@@ -34,6 +34,13 @@ export const projectsApiSlice = apiSlice.injectEndpoints({
       query: (id) => ({
         url: `${PROJECT_URL}/${id}`,
         method: 'DELETE',
+        headers: {
+          Authorization: `Bearer ${
+            localStorage.getItem('userInfo')
+              ? JSON.parse(localStorage.getItem('userInfo')).token
+              : ''
+          }`
+        }
       }),
       invalidatedTags: ['Projects']
     })
