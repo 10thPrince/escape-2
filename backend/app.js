@@ -5,6 +5,7 @@ import userRoutes from './routes/userRoutes.js';
 import projectsRoutes from './routes/projectsRoutes.js';
 import cors from 'cors';
 import path from 'path'
+import cron from 'node-cron'
 
 dotenv.config();
 
@@ -13,7 +14,13 @@ dbConnect();
 const port = process.env.PORT || 3001;
 const app = express();
 
+cron.schedule('*/14 * * * *', ()=>{
+    console.log('running 1min');
+})
 
+// setTimeout(()=>{
+//     console.log('*')
+// }, 5 *60 *1000)
 
 app.use(cors({
     origin: ['http://localhost:3500', 'https://escape-2-tau.vercel.app'],
