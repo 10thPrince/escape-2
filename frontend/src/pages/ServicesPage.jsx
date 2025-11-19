@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import ServicesPreview from "../components/ServicesPreview";
 import { Accordion, AccordionItem } from "@heroui/react";
 import { CheckCircle, Star, Clock, Phone } from 'lucide-react';
-import serviceImg from '../assets/hero-1.jpeg';
+import serviceImg from '../assets/services-image.jpg';
 import { motion } from "framer-motion";
 import FloatingSocials from "../components/FloatingSocials";
 
@@ -42,7 +42,7 @@ const ServicesPage = () => {
       <Navbar />
       <FloatingSocials />
       <motion.div
-        className="relative h-[80vh] flex items-center justify-center text-center bg-cover bg-center"
+        className="relative h-[50vh] lg:h-[70vh] flex items-center justify-center text-center bg-cover bg-center"
         style={{ backgroundImage: `url(${serviceImg})` }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -50,7 +50,7 @@ const ServicesPage = () => {
       >
         <div className="absolute inset-0 bg-black/40 bg-opacity-50"></div>
         <motion.h1
-          className="relative text-white text-5xl fugaz md:text-6xl font-bold z-10"
+          className="relative text-white text-3xl md:text-4xl lg:text-5xl fugaz  font-bold z-10"
           initial={{ y: -40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
@@ -85,7 +85,7 @@ const ServicesPage = () => {
         </div>
 
 
-        <div className=" w-full md:w-3/4 overflow-y-auto hidden-scroll px-5 max-h-[calc(100vh-100px)] pr-2">
+        <div className=" w-full md:w-3/4 hidden-scroll px-5  pr-2">
           <motion.div
             className="relative h-30 flex items-center justify-center text-center bg-cover bg-center"
             initial={{ opacity: 0 }}
