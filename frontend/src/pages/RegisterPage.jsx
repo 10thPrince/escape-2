@@ -80,7 +80,7 @@ const RegisterPage = () => {
                             placeholder="you@example.com"
                             value={email}
                             onChange={(e) => { setEmail(e.target.value) }}
-                            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-[#8B4513]"
+                            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-primary"
                             required
                         />
                     </div>
@@ -93,7 +93,7 @@ const RegisterPage = () => {
                             placeholder="••••••••"
                             value={password}
                             onChange={(e) => { setPassword(e.target.value) }}
-                            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-[#8B4513]"
+                            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-primary"
                             required
                         />
                     </div>
@@ -105,13 +105,13 @@ const RegisterPage = () => {
                             placeholder="••••••••"
                             value={confirmPassword}
                             onChange={(e) => { setConfirmPassword(e.target.value) }}
-                            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-[#8B4513]"
+                            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-primary"
                             required
                         />
                     </div>
                     {isLoading ? <Spinner /> : <button
                         type="submit"
-                        className="w-full bg-[#8B4513] text-white py-2 rounded-md hover:bg-[#6F3B10] transition"
+                        className="w-full bg-primary text-white py-2 rounded-md hover:bg-primary transition"
                     >
                         Register
                     </button>}
@@ -120,7 +120,7 @@ const RegisterPage = () => {
                     <p className="text-sm text-center mt-4 text-gray-600">
                         Already have an ACoount?{" "}
                         <Link to='/login'>
-                            <span className="text-[#8B4513] font-semibold hover:underline">
+                            <span className="text-primary font-semibold hover:underline">
                                 LogIn
                             </span>
                         </Link>

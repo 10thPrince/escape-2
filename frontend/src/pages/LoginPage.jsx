@@ -48,9 +48,9 @@ const LoginPage = () => {
 
             <form
                 onSubmit={submitHandler}
-                className="bg-white shadow-md rounded-2xl p-8 w-full max-w-md border-t-4 border-[#8B4513]"
+                className="bg-white shadow-md rounded-2xl p-8 w-full max-w-md border-t-4 border-primary"
             >
-                <h2 className="text-2xl font-bold text-center mb-6 text-[#8B4513]">
+                <h2 className="text-2xl font-bold text-center mb-6 text-primary">
                     Welcome Back
                 </h2>
 
@@ -62,7 +62,7 @@ const LoginPage = () => {
                         placeholder="you@example.com"
                         value={email}
                         onChange={(e) => { setEmail(e.target.value) }}
-                        className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-[#8B4513]"
+                        className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-primary"
                         required
                     />
                 </div>
@@ -75,13 +75,13 @@ const LoginPage = () => {
                         placeholder="••••••••"
                         value={password}
                         onChange={(e) => { setPassword(e.target.value) }}
-                        className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-[#8B4513]"
+                        className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-primary"
                         required
                     />
                 </div>
                 {isLoading ? <Spinner /> : <button
                     type="submit"
-                    className="w-full bg-[#8B4513] text-white py-2 rounded-md hover:bg-[#6F3B10] transition"
+                    className="w-full bg-primary text-white py-2 rounded-md hover:bg-primary transition"
                 >
                     Log In
                 </button>}
@@ -90,7 +90,7 @@ const LoginPage = () => {
                 <p className="text-sm text-center mt-4 text-gray-600">
                     Don’t have an account?{" "}
                     <Link to='/register'>
-                        <span className="text-[#8B4513] font-semibold hover:underline">
+                        <span className="text-primary font-semibold hover:underline">
                             Register
                         </span>
                     </Link>
