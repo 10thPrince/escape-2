@@ -13,7 +13,8 @@ const FetchProjects = () => {
     const [selectedProject, setSelectedProject] = useState(null);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [deleteProject] = useDeleteProjectMutation();
-    const {userInfo} = useSelector((state) => state.auth)
+    const [imgSize, setImgSize] = useState({ width: 0, height: 0 });
+    const { userInfo } = useSelector((state) => state.auth)
 
     if (isLoading) return (
         <>
@@ -26,8 +27,8 @@ const FetchProjects = () => {
         </>
     );
 
-    const handleDelete = async(id) => {
-        if(window.confirm('Are ypu sure you want to delete this Project?')){
+    const handleDelete = async (id) => {
+        if (window.confirm('Are ypu sure you want to delete this Project?')) {
             try {
                 await deleteProject(id).wrap();
                 toast('Project deleted successful');
@@ -35,7 +36,7 @@ const FetchProjects = () => {
                 console.error(error);
                 toast('Failed to delete Project');
             }
-        }else{
+        } else {
 
         }
     }
@@ -64,6 +65,13 @@ const FetchProjects = () => {
             prev === selectedProject.images.length - 1 ? 0 : prev + 1
         );
     };
+
+
+
+    const handleImageLoad = (e) => {
+        setImgSize({ width: e.target.naturalWidth, height: e.target.naturalHeight });
+    };
+
 
     return (
         <div className="min-h-screen flex flex-col">
@@ -106,48 +114,95 @@ const FetchProjects = () => {
 
             {/* Modal */}
             {modalOpen && selectedProject && (
-                <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
-                    <button
-                        className="absolute top-5 right-5 text-white text-3xl font-bold"
-                        onClick={closeModal}
+                <motion.div
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    onClick={closeModal} // click outside closes modal
+                >
+                    <motion.div
+                        className="relative max-w-4xl w-full mx-4 sm:mx-auto"
+                        initial={{ scale: 0.8 }}
+                        animate={{ scale: 1 }}
+                        exit={{ scale: 0.8 }}
+                        onClick={(e) => e.stopPropagation()} // prevent modal click from closing
                     >
-                        &times;
-                    </button>
+                        {/* Close Button */}
+                        <button
+                            onClick={closeModal}
+                            className="absolute top-3 right-3 text-white text-3xl font-bold hover:text-red-500 transition"
+                        >
+                            &times;
+                        </button>
 
-                    <div className="relative max-w-3xl w-full mx-auto">
-                        <img
-                            src={selectedProject.images[currentIndex]}
-                            alt={`${selectedProject.title} ${currentIndex + 1}`}
-                            className="w-full h-[60vh] object-cover rounded-lg"
-                        />
+                        {/* Image Carousel */}
+                        <div
+                            className="relative mx-auto"
+                            style={{
+                                width: imgSize.width > 800 ? 800 : imgSize.width, // max width limit
+                                height: imgSize.height > 600 ? 600 : imgSize.height, // max height limit
+                            }}
+                        >
+                            <img
+                                src={selectedProject.images[currentIndex]}
+                                alt={`${selectedProject.title} ${currentIndex + 1}`}
+                                onLoad={handleImageLoad}
+                                className="object-contain w-full h-full rounded-xl shadow-lg"
+                            />
 
-                        {/* Navigation */}
-                        {selectedProject.images.length > 1 && (
-                            <>
-                                <button
-                                    onClick={prevImage}
-                                    className="absolute top-1/2 left-2 transform -translate-y-1/2 text-white text-3xl bg-black bg-opacity-30 rounded-full px-3 py-1 hover:bg-opacity-60"
-                                >
-                                    &#10094;
-                                </button>
-                                <button
-                                    onClick={nextImage}
-                                    className="absolute top-1/2 right-2 transform -translate-y-1/2 text-white text-3xl bg-black bg-opacity-30 rounded-full px-3 py-1 hover:bg-opacity-60"
-                                >
-                                    &#10095;
-                                </button>
-                            </>
-                        )}
 
-                        {/* Title & Description */}
-                        <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white p-4 rounded-b-lg">
-                            <h3 className="text-lg font-semibold">{selectedProject.title}</h3>
-                            <p className="text-sm">{selectedProject.description}</p>
+                            {/* Navigation */}
+                            {selectedProject.images.length > 1 && (
+                                <>
+                                    <button
+                                        onClick={prevImage}
+                                        className="absolute top-1/2 left-2 transform -translate-y-1/2 text-white text-4xl bg-black bg-opacity-30 rounded-full px-3 py-1 hover:bg-opacity-60 transition"
+                                    >
+                                        &#10094;
+                                    </button>
+                                    <button
+                                        onClick={nextImage}
+                                        className="absolute top-1/2 right-2 transform -translate-y-1/2 text-white text-4xl bg-black bg-opacity-30 rounded-full px-3 py-1 hover:bg-opacity-60 transition"
+                                    >
+                                        &#10095;
+                                    </button>
+                                </>
+                            )}
+
+                            {/* Title & Description */}
+                            <motion.div
+                                className="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 p-4 rounded-b-xl text-white"
+                                initial={{ y: 50, opacity: 0 }}
+                                animate={{ y: 0, opacity: 1 }}
+                                transition={{ duration: 0.3 }}
+                            >
+                                <h3 className="text-xl sm:text-2xl font-semibold">{selectedProject.title}</h3>
+                                <p className="text-sm sm:text-base">{selectedProject.description}</p>
+                            </motion.div>
                         </div>
-                    </div>
-                </div>
-            )}
-        </div>
+
+                        {/* Thumbnail Carousel */}
+                        {selectedProject.images.length > 1 && (
+                            <div className="flex justify-center gap-2 mt-4 overflow-x-auto px-2">
+                                {selectedProject.images.map((img, i) => (
+                                    <img
+                                        key={i}
+                                        src={img}
+                                        alt={`thumb ${i + 1}`}
+                                        className={`w-16 h-16 object-cover rounded-lg border-2 cursor-pointer ${i === currentIndex ? "border-primary" : "border-transparent"
+                                            }`}
+                                        onClick={() => setCurrentIndex(i)}
+                                    />
+                                ))}
+                            </div>
+                        )}
+                    </motion.div>
+                </motion.div>
+            )
+            }
+
+        </div >
     )
 }
 

@@ -15,7 +15,7 @@ const port = process.env.PORT || 3001;
 const app = express();
 
 cron.schedule('*/14 * * * *', ()=>{
-    console.log('running 1min');
+    console.log('running 14min');
 })
 
 // setTimeout(()=>{
