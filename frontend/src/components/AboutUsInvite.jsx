@@ -77,7 +77,7 @@ const AboutUsSection = () => {
               to="/about"
               className="inline-block px-6 py-3 bg-primary text-white rounded-full font-medium text-sm uppercase tracking-wide shadow-lg hover:shadow-xl transition-shadow"
             >
-              Explore Our Story onUs
+              Explore Our Story
             </Link>
           </motion.div>
         </div>

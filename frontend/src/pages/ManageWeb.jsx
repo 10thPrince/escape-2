@@ -11,7 +11,7 @@ const ManageWeb = () => {
     <>
         <Navbar />
         <h1 className='mt-40 text-4xl text-primary fugaz'>Projects Management</h1>
-        <div className='flex flex-row gap-3 px-10'>
+        <div className='flex flex-col md:flex-row gap-3 px-10'>
             <AddProject />
             <FetchProjects />
         </div>
