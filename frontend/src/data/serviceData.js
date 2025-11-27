@@ -139,6 +139,29 @@ export const servicesData = {
           },
         ],
       },
+      {
+        id: "accessories",
+        name: "ACCESSORIES",
+        description:
+          "Essential accessories crafted to enhance functionality and add a refined touch to your everyday space.",
+        images: [
+          {
+            url: spray,
+            title: 'Skirting',
+            description: "Durable skirting designed to protect walls and create a clean, seamless floor finish."
+          },
+          {
+            url: mop,
+            title: 'Underlay',
+            description: "High-quality underlay that enhances stability, reduces noise, and improves overall floor comfort."
+          },
+          {
+            url: cloth,
+            title: 'Moulding',
+            description: "Precision-crafted moulding that adds a refined decorative touch to edges and transitions."
+          },
+        ],
+      },
     ],
   },
 
@@ -248,7 +271,7 @@ export const servicesData = {
       },
       {
         id: "new-interior",
-        name: "New Interior",
+        name: "Mordern Kitchen",
         description:
           "Complete interior design solutions for brand-new kitchens, blending contemporary design with top-quality materials.",
         images: [

@@ -20,7 +20,7 @@ const FloatingSocials = () => {
       </a>
       {/* LinkedIn */}
       <a
-        href="https://linkedin.com"
+        href="https://www.linkedin.com/in/horebu-olivier-28a398358?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
         target="_blank"
         rel="noreferrer"
         className="p-2 text-gray-300 hover:text-primary transition"
@@ -30,7 +30,7 @@ const FloatingSocials = () => {
 
       {/* Twitter/X */}
       <a
-        href="https://x.com/me_princ3"
+        href="https://x.com/escapeltd1?s=11&t=FDVWRXIf2z_k_50S02U1lQ"
         target="_blank"
         rel="noreferrer"
         className="p-2 text-gray-300 hover:text-primary transition"
@@ -40,7 +40,7 @@ const FloatingSocials = () => {
 
       {/* Instagram */}
       <a
-        href="https://instagram.com/_nprinc_"
+        href="https://www.instagram.com/escapeltd?igsh=MWw4ZmJ3NmRocW94cQ%3D%3D&utm_source=qr"
         target="_blank"
         rel="noreferrer"
         className="p-2 text-gray-300 hover:text-primary transition"
