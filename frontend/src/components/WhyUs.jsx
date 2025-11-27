@@ -34,7 +34,7 @@ const WhyUs = () => {
   return (
      <section id="why-us" className="py-20 my-10 bg-gray-50 text-center">
       <motion.h2
-        className="text-4xl font-bold mb-12 text-gray-800 fugaz"
+        className="text-4xl font-bold mb-12 text-secondary fugaz"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}

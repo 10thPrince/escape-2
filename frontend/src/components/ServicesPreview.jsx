@@ -49,7 +49,7 @@ const ServicesPreview = () => {
     <section className="py-20 bg-gray-50">
       <div className="text-center mb-12 px-6">
         <motion.h2
-          className="text-4xl font-bold text-gray-800 mb-3 fugaz"
+          className="text-4xl font-bold text-secondary mb-3 fugaz"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
