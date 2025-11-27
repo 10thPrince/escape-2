@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../slices/authSlice";
 import { servicesData } from "../data/serviceData";
-import escape from "../assets/escape_logo-removebg-preview.png";
+import escape from "../assets/Escape-Main-Blue-Light-Logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

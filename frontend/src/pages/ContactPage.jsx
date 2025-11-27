@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import {
+  Facebook,
   Instagram,
   Linkedin,
   Mail,
@@ -17,6 +18,7 @@ import { toast } from 'react-toastify'
 import Footer from "../components/Footer";
 import contactMain from '../assets/contact/contactMain.jpg'
 import FloatingSocials from '../components/FloatingSocials.jsx'
+import {FaWhatsapp, FaTiktok} from 'react-icons/fa'
 
 const ContactPage = () => {
   const {
@@ -141,7 +143,7 @@ const ContactPage = () => {
               <h4 className="font-semibold mb-3 text-start">Follow Us</h4>
               <div className="flex m-auto space-x-4 text-center">
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/horebu-olivier-28a398358?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
                   target="_blank"
                   rel="noreferrer"
                   className="p-2 text-center rounded-full hover:bg-[#8B4513]/10 transition"
@@ -149,7 +151,7 @@ const ContactPage = () => {
                   <Linkedin className="text-primary" />
                 </a>
                 <a
-                  href="https://x.com/"
+                  href="https://x.com/escapeltd1?s=11&t=FDVWRXIf2z_k_50S02U1lQ"
                   target="_blank"
                   rel="noreferrer"
                   className="p-2 rounded-full hover:bg-[#8B4513]/10 transition"
@@ -157,12 +159,36 @@ const ContactPage = () => {
                   <Twitter className="text-primary" />
                 </a>
                 <a
-                  href="https://www.instagram.com/"
+                  href="https://www.instagram.com/escapeltd?igsh=MWw4ZmJ3NmRocW94cQ%3D%3D&utm_source=qr"
                   target="_blank"
                   rel="noreferrer"
                   className="p-2 rounded-full hover:bg-[#8B4513]/10 transition"
                 >
                   <Instagram className="text-primary" />
+                </a>
+                <a
+                  href="https://www.facebook.com/share/1DKjLZai4h/?mibextid=wwXIfr"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="p-2 rounded-full hover:bg-[#8B4513]/10 transition"
+                >
+                  <Facebook className="text-primary" />
+                </a>
+                <a
+                  href="https://whatsapp.com/channel/0029VbBazL63AzNNWaqbdI19"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="p-2 rounded-full hover:bg-[#8B4513]/10 transition"
+                >
+                  <FaWhatsapp size={20} className="text-primary" />
+                </a>
+                <a
+                  href="https://www.tiktok.com/@escape.ltd?_r=1&_t=ZM-91bxkylPtEa"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="p-2 rounded-full hover:bg-[#8B4513]/10 transition"
+                >
+                  <FaTiktok size={20} className="text-primary" />
                 </a>
               </div>
             </div>

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
-import logo from "../assets/escape_logo-removebg-preview.png"; // ✅ your company logo path
+import logo from "../assets/Escape-Logo-Dark-White.png"; 
 
 const links = [
   { name: "Home", linkUrl: "/" },
@@ -13,7 +13,7 @@ const links = [
 
 const Footer = () => {
     return (
-        <footer className="bg-[#1a1a1a] text-gray-300 pt-16 pb-8">
+        <footer className="bg-black text-gray-300 pt-16 pb-8">
             <section id="footer"></section>
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-6 gap-10 px-6">
                 {/*  Logo Section */}
@@ -23,7 +23,7 @@ const Footer = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6 }}
                 >
-                    <img src={logo} alt="Escape LTD" className="w-32 object-contain" />
+                    <img src={logo} alt="Escape LTD" className="w-40 object-contain" />
                     <p className="text-sm text-gray-400 leading-relaxed">
                         Transforming interiors into timeless expressions of comfort and style
                         across Rwanda.
