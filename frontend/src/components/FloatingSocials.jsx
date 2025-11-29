@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Facebook, Instagram, Linkedin, Phone, Twitter } from "lucide-react";
+import { FaTiktok, FaWhatsapp } from "react-icons/fa";
 
 const FloatingSocials = () => {
   return (
@@ -46,6 +47,23 @@ const FloatingSocials = () => {
         className="p-2 text-gray-300 hover:text-primary transition"
       >
         <Instagram size={22} />
+      </a>
+
+      <a
+        href="https://whatsapp.com/channel/0029VbBazL63AzNNWaqbdI19"
+        target="_blank"
+        rel="noreferrer"
+        className="p-2 rounded-full hover:bg-[#8B4513]/10 transition"
+      >
+        <FaWhatsapp size={23} className="text-white" />
+      </a>
+      <a
+        href="https://www.tiktok.com/@escape.ltd?_r=1&_t=ZM-91bxkylPtEa"
+        target="_blank"
+        rel="noreferrer"
+        className="p-2 rounded-full hover:bg-[#8B4513]/10 transition"
+      >
+        <FaTiktok size={20} className="text-white" />
       </a>
 
       {/* Facebook */}
