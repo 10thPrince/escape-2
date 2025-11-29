@@ -180,7 +180,7 @@ const ContactPage = () => {
                   rel="noreferrer"
                   className="p-2 rounded-full hover:bg-[#8B4513]/10 transition"
                 >
-                  <FaWhatsapp size={20} className="text-primary" />
+                  <FaWhatsapp size={23} className="text-primary" />
                 </a>
                 <a
                   href="https://www.tiktok.com/@escape.ltd?_r=1&_t=ZM-91bxkylPtEa"
