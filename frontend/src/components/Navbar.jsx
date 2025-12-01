@@ -31,12 +31,12 @@ const Navbar = () => {
   return (
     <nav className="bg-white shadow-md fixed w-full top-0 left-0 z-50">
       <div
-        className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center relative"
+        className="max-w-8xl mx-auto px-6 py-2 flex justify-between items-center relative"
         ref={dropdownRef}
       >
         {/* LOGO */}
-        <Link to="/">
-          <img src={escape} alt="Logo" className="h-10 md:h-14 cursor-pointer" />
+        <Link to="/" className="items-start">
+          <img src={escape} alt="Logo" className="h-10 md:h-17 cursor-pointer" />
         </Link>
 
         {/* DESKTOP MENU */}
