@@ -33,6 +33,30 @@ import flooringKitchen from '../assets/services-img/kitchen/renovate/flooring-ki
 import contemporaryKitchen from '../assets/services-img/kitchen/modern/contemporary-kitchen.webp'
 import cabinetInstallation from '../assets/services-img/kitchen/modern/cabinet-installation.webp'
 import modernKitchen from '../assets/services-img/kitchen/modern/modern-kitchen.webp'
+import luxeSofa from '../assets/services-img/furniture/sofa/luxe-sofa.webp'
+import modernSofa from '../assets/services-img/furniture/sofa/modern-sofa.webp'
+import compactSofa from '../assets/services-img/furniture/sofa/comapact-sofa.webp'
+import coffeeTable from '../assets/services-img/furniture/tables/coffee-table.webp'
+import diningTable from '../assets/services-img/furniture/tables/dining-table.webp'
+import sideTable from '../assets/services-img/furniture/tables/side-table.webp'
+import modernCabinet from '../assets/services-img/furniture/cabinets/modern-cabinet1.webp'
+import tvStand from '../assets/services-img/furniture/cabinets/v-stand.webp'
+import wallCabinet from '../assets/services-img/furniture/cabinets/wall-cabinet.webp'
+import diningChair from '../assets/services-img/furniture/chair/dining-chair.webp'
+import loungeChaire from '../assets/services-img/furniture/chair/lounge-chair.webp'
+import officeChaire from '../assets/services-img/furniture/chair/office-chaire.webp'
+import customBuild from '../assets/services-img/furniture/escape/custom-build.webp'
+import escapeDesign from '../assets/services-img/furniture/escape/scape-design.webp'
+import signaturePiesce from '../assets/services-img/furniture/escape/signature-piece.webp'
+import steelDoor from '../assets/services-img/doors/metal/steel-door.webp'
+import heavyDoor from '../assets/services-img/doors/metal/heavy-door.webp'
+import metalFrame from '../assets/services-img/doors/metal/meal-frame.webp'
+import classicWood from '../assets/services-img/doors/wooden/classic-doors.webp'
+import panelDoor from '../assets/services-img/doors/wooden/panel-door.webp'
+import modernDoor from '../assets/services-img/doors/wooden/modern-wood-door.webp'
+import escapeDoor from '../assets/services-img/doors/escape/escape-door.webp'
+import signatureDoor from '../assets/services-img/doors/escape/signature-doors.webp'
+import designedDoor from '../assets/services-img/doors/escape/designer-door.webp'
 
 
 export const servicesData = {
@@ -261,6 +285,7 @@ export const servicesData = {
 
     ],
   },
+
   kitchen: {
     title: "Kitchen",
     description:
@@ -329,17 +354,17 @@ export const servicesData = {
           "Modern and comfortable sofas tailored to complement your home’s design and offer long-lasting relaxation.",
         images: [
           {
-            url: walnutLaminate,
+            url: modernSofa,
             title: "Modern Sofa",
             description: "A stylish, comfortable sofa designed for everyday relaxation."
           },
           {
-            url: oakLaminate,
+            url: luxeSofa,
             title: "Luxe Sofa",
             description: "Premium sofa craftsmanship for elegant living spaces."
           },
           {
-            url: greyLaminate,
+            url: compactSofa,
             title: "Compact Sofa",
             description: "Space-saving sofa with modern design and comfort."
           },
@@ -353,17 +378,17 @@ export const servicesData = {
           "Dining, coffee, and side tables made from quality materials — functional and stylish for every setting.",
         images: [
           {
-            url: walnutLaminate,
+            url: diningTable,
             title: "Dining Table",
             description: "A durable dining table designed for everyday use."
           },
           {
-            url: oakLaminate,
+            url: coffeeTable,
             title: "Coffee Table",
             description: "A sleek coffee table that blends with any interior."
           },
           {
-            url: greyLaminate,
+            url: sideTable,
             title: "Side Table",
             description: "A functional side table for bedrooms or living rooms."
           },
@@ -377,17 +402,17 @@ export const servicesData = {
           "Sleek and space-saving cabinets and TV stands, designed to bring organization and sophistication to your living area.",
         images: [
           {
-            url: walnutLaminate,
+            url: modernCabinet,
             title: "Modern Cabinet",
             description: "Stylish storage cabinet that organizes your space."
           },
           {
-            url: oakLaminate,
+            url: tvStand,
             title: "TV Stand",
             description: "A clean, modern TV stand with strong build quality."
           },
           {
-            url: greyLaminate,
+            url: wallCabinet,
             title: "Wall Cabinet",
             description: "Space-efficient cabinet ideal for all interiors."
           },
@@ -401,17 +426,17 @@ export const servicesData = {
           "From dining chairs to lounge seating, we craft comfortable, stylish designs built to last.",
         images: [
           {
-            url: walnutLaminate,
+            url: diningChair,
             title: "Dining Chair",
             description: "A comfortable dining chair built for daily use."
           },
           {
-            url: oakLaminate,
+            url: loungeChaire,
             title: "Lounge Chair",
             description: "A relaxing chair with a modern touch."
           },
           {
-            url: greyLaminate,
+            url: officeChaire,
             title: "Office Chair",
             description: "Ergonomic seating ideal for long working hours."
           },
@@ -425,17 +450,17 @@ export const servicesData = {
           "Exclusive furniture designs crafted by Escape LTD, reflecting creativity, craftsmanship, and modern taste.",
         images: [
           {
-            url: walnutLaminate,
+            url: escapeDesign,
             title: "Escape Design",
             description: "Unique Escape LTD furniture crafted with detail."
           },
           {
-            url: oakLaminate,
+            url: signaturePiesce,
             title: "Signature Piece",
             description: "Exclusive design showcasing modern craftsmanship."
           },
           {
-            url: greyLaminate,
+            url: customBuild,
             title: "Custom Build",
             description: "A tailor-made piece reflecting your style."
           },
@@ -444,6 +469,7 @@ export const servicesData = {
       },
     ],
   },
+
   doors: {
     title: "Doors",
     description:
@@ -456,17 +482,17 @@ export const servicesData = {
           "High-security metal doors crafted with precision for durability and modern appeal.",
         images: [
           {
-            url: walnutLaminate,
+            url: steelDoor,
             title: "Steel Door",
             description: "High-security steel door with modern finish."
           },
           {
-            url: oakLaminate,
+            url: heavyDoor,
             title: "Heavy Door",
             description: "Strong, durable door for maximum protection."
           },
           {
-            url: greyLaminate,
+            url: metalFrame,
             title: "Metal Frame",
             description: "A clean, stylish metal door frame design."
           },
@@ -480,17 +506,17 @@ export const servicesData = {
           "Classic wooden doors with timeless beauty, made from quality materials and finished to perfection.",
         images: [
           {
-            url: walnutLaminate,
+            url: classicWood,
             title: "Classic Door",
             description: "A timeless wooden door made from quality wood."
           },
           {
-            url: oakLaminate,
+            url: panelDoor,
             title: "Panel Door",
             description: "Smooth, elegant door with a natural finish."
           },
           {
-            url: greyLaminate,
+            url: modernDoor,
             title: "Modern Wood Door",
             description: "A stylish door that fits any contemporary home."
           },
@@ -504,17 +530,17 @@ export const servicesData = {
           "Signature door collections by Escape LTD — combining craftsmanship, innovation, and design excellence.",
         images: [
           {
-            url: walnutLaminate,
+            url: escapeDoor,
             title: "Escape Door",
             description: "Premium door design by Escape LTD."
           },
           {
-            url: oakLaminate,
+            url: signatureDoor,
             title: "Signature Door",
             description: "Exclusive style crafted with precision."
           },
           {
-            url: greyLaminate,
+            url: designedDoor,
             title: "Designer Door",
             description: "A modern signature piece for luxury homes."
           },
