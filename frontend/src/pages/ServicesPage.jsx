@@ -63,8 +63,8 @@ const ServicesPage = () => {
           <div className="sticky top-24 h-fit">
             <Accordion selectionMode="single">
               {Object.entries(servicesData).map(([key, value]) => (
-                <AccordionItem key={key} aria-label={value.title} title={value.title}>
-                  <ul className="space-y-2 pl-2">
+                <AccordionItem key={key} aria-label={value.title} className="my-3" title={value.title}>
+                  <ul className=" pl-2">
                     {value.subs.map((sub) => (
                       <li key={sub.id} >
                         <Link

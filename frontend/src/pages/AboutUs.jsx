@@ -4,11 +4,13 @@ import aboutMain2 from '../assets/about/about-main.jpg'
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import teamImg from '../assets/hero-bg.png';
+import imageOne from '../assets/about-one.jpg'
+import imageTwo from '../assets/about-two.jpg'
 import interiorImg from '../assets/furniture.jpg'
 import founder from '../assets/founder.avif'
 import Footer from '../components/Footer';
 import FloatingSocials from '../components/FloatingSocials';
+
 
 
 const fadeInUp = {
@@ -82,14 +84,14 @@ const AboutUs = () => {
                 <AboutSection
                     title="Who We Are"
                     text="Escape LTD is a Rwandan-based interior design company dedicated to transforming spaces into modern, elegant, and functional environments. Our mission is to craft interiors that reflect beauty, creativity, and comfort for both homes and businesses."
-                    img={interiorImg}
+                    img={imageOne}
                 />
 
                 {/* Vision & Mission */}
                 <AboutSection
                     title="Our Vision & Mission"
                     text="Our vision is to redefine interior design by merging creativity with sustainability. We aim to deliver top-tier designs that meet international standards while embracing the uniqueness of African aesthetics."
-                    img={teamImg}
+                    img={imageTwo}
                     reverse
                 />
 
