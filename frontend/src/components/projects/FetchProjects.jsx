@@ -115,76 +115,67 @@ const FetchProjects = () => {
             {/* Modal */}
             {modalOpen && selectedProject && (
                 <motion.div
-                    className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80"
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 p-2 sm:p-4"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    onClick={closeModal} // click outside closes modal
+                    onClick={closeModal}
                 >
                     <motion.div
-                        className="relative max-w-4xl w-full mx-4 sm:mx-auto"
-                        initial={{ scale: 0.8 }}
+                        className="relative w-full max-w-4xl mx-auto"
+                        initial={{ scale: 0.85 }}
                         animate={{ scale: 1 }}
-                        exit={{ scale: 0.8 }}
-                        onClick={(e) => e.stopPropagation()} // prevent modal click from closing
+                        exit={{ scale: 0.85 }}
+                        onClick={(e) => e.stopPropagation()}
                     >
-                        {/* Close Button */}
+
+                        {/* Close button */}
                         <button
                             onClick={closeModal}
-                            className="absolute top-3 right-3 text-white text-3xl font-bold hover:text-red-500 transition"
+                            className="absolute top-2 right-2 z-50 text-red-500 text-3xl font-bold transition"
                         >
                             &times;
                         </button>
 
-                        {/* Image Carousel */}
-                        <div
-                            className="relative mx-auto"
-                            style={{
-                                width: imgSize.width > 800 ? 800 : imgSize.width, // max width limit
-                                height: imgSize.height > 600 ? 600 : imgSize.height, // max height limit
-                            }}
-                        >
+
+                        {/* Image container */}
+                        <div className="relative w-full flex justify-center">
                             <img
                                 src={selectedProject.images[currentIndex]}
                                 alt={`${selectedProject.title} ${currentIndex + 1}`}
                                 onLoad={handleImageLoad}
-                                className="object-contain w-full h-full rounded-xl shadow-lg"
+                                className="w-full max-w-full max-h-[85vh] object-contain rounded-xl shadow-lg"
                             />
 
-
-                            {/* Navigation */}
+                            {/* Navigation arrows */}
                             {selectedProject.images.length > 1 && (
                                 <>
                                     <button
                                         onClick={prevImage}
-                                        className="absolute top-1/2 left-2 transform -translate-y-1/2 text-white text-4xl bg-black bg-opacity-30 rounded-full px-3 py-1 hover:bg-opacity-60 transition"
+                                        className="absolute top-1/2 left-2 -translate-y-1/2 text-white text-4xl bg-black/30 rounded-full px-3 py-1 hover:bg-black/60 transition"
                                     >
                                         &#10094;
                                     </button>
                                     <button
                                         onClick={nextImage}
-                                        className="absolute top-1/2 right-2 transform -translate-y-1/2 text-white text-4xl bg-black bg-opacity-30 rounded-full px-3 py-1 hover:bg-opacity-60 transition"
+                                        className="absolute top-1/2 right-2 -translate-y-1/2 text-white text-4xl bg-black/30 rounded-full px-3 py-1 hover:bg-black/60 transition"
                                     >
                                         &#10095;
                                     </button>
                                 </>
                             )}
-
-                            {/* Title & Description */}
-                            <motion.div
-                                className="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 p-4 rounded-b-xl text-white"
-                                initial={{ y: 50, opacity: 0 }}
-                                animate={{ y: 0, opacity: 1 }}
-                                transition={{ duration: 0.3 }}
-                            >
-                                <h3 className="text-xl sm:text-2xl font-semibold">{selectedProject.title}</h3>
-                                <p className="text-sm sm:text-base">{selectedProject.description}</p>
-                            </motion.div>
                         </div>
 
-                        {/* Thumbnail Carousel */}
+                        {/* Title & Description OUTSIDE image */}
+                        <div className="mt-3 text-white text-center px-2">
+                            <h3 className="text-xl sm:text-2xl font-semibold">{selectedProject.title}</h3>
+                            <p className="text-sm sm:text-base">{selectedProject.description}</p>
+                        </div>
+
+
+                        {/* Thumbnail row */}
                         {selectedProject.images.length > 1 && (
-                            <div className="flex justify-center gap-2 mt-4 overflow-x-auto px-2">
+                            <div className="flex justify-center gap-2 mt-4 overflow-x-auto px-2 pb-2">
                                 {selectedProject.images.map((img, i) => (
                                     <img
                                         key={i}
@@ -199,8 +190,8 @@ const FetchProjects = () => {
                         )}
                     </motion.div>
                 </motion.div>
-            )
-            }
+            )}
+
 
         </div >
     )
