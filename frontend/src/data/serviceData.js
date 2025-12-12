@@ -57,6 +57,12 @@ import modernDoor from '../assets/services-img/doors/wooden/modern-wood-door.web
 import escapeDoor from '../assets/services-img/doors/escape/escape-door.webp'
 import signatureDoor from '../assets/services-img/doors/escape/signature-doors.webp'
 import designedDoor from '../assets/services-img/doors/escape/designer-door.webp'
+import modernCeiling from '../assets/services-img/ceiling/gypsum/modern-ceiling.webp'
+import ledCeiling from '../assets/services-img/ceiling/gypsum/LED-Ceiling.webp'
+import panelCeiling from '../assets/services-img/ceiling/gypsum/Panel-Ceiling.webp'
+import tvPanel from '../assets/services-img/ceiling/tv-wall/tv-panel.webp'
+import featuredWall from '../assets/services-img/ceiling/tv-wall/Feature-Wall.webp'
+import wallUnit from '../assets/services-img/ceiling/tv-wall/Wall-Unit.webp'
 
 
 export const servicesData = {
@@ -562,17 +568,17 @@ export const servicesData = {
           "Custom gypsum ceiling installations that elevate interiors with modern patterns and smooth finishes.",
         images: [
           {
-            url: walnutLaminate,
+            url: modernCeiling,
             title: "Modern Ceiling",
             description: "Smooth gypsum ceiling with clean patterns."
           },
           {
-            url: oakLaminate,
+            url: ledCeiling,
             title: "LED Ceiling",
             description: "Gypsum ceiling enhanced with LED lighting."
           },
           {
-            url: greyLaminate,
+            url: panelCeiling,
             title: "Panel Ceiling",
             description: "Stylish gypsum panels for modern interiors."
           },
@@ -586,17 +592,17 @@ export const servicesData = {
           "Creative wall paneling solutions for TVs — blending design and functionality for modern interiors.",
         images: [
           {
-            url: walnutLaminate,
+            url: tvPanel,
             title: "TV Panel",
             description: "A clean, decorative wall panel for your TV."
           },
           {
-            url: oakLaminate,
+            url: featuredWall,
             title: "Feature Wall",
             description: "A modern feature wall with sleek finish."
           },
           {
-            url: greyLaminate,
+            url: wallUnit,
             title: "Wall Unit",
             description: "A stylish media wall blending design and function."
           },
