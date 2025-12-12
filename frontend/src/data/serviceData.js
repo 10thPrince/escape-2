@@ -69,6 +69,12 @@ import officeDivider from '../assets/services-img/partition/alimuniam/Office-Div
 import gypsumWall from '../assets/services-img/partition/gypsum/Gypsum-Wall.webp'
 import panelPartition from '../assets/services-img/partition/gypsum/Panel-Partition.webp'
 import roomDivider from '../assets/services-img/partition/gypsum/Room-Divider.webp'
+import wallFinish from '../assets/services-img/paint/interior/wall-finish2.webp'
+import colorCoat from '../assets/services-img/paint/interior/color-coat2.webp'
+import matteFinish from '../assets/services-img/paint/interior/matte-finish.webp'
+import weatherCoat from '../assets/services-img/paint/exterior/WeatherCoat.webp'
+import protectivePaint from '../assets/services-img/paint/exterior/ProtectivePaint.webp'
+import exteriorFinish from '../assets/services-img/paint/exterior/ExteriorFinish.jpg'
 
 
 export const servicesData = {
@@ -686,17 +692,17 @@ export const servicesData = {
           "Premium interior painting using high-quality, low-odor paints to create smooth finishes and vibrant atmospheres.",
         images: [
           {
-            url: walnutLaminate,
+            url: wallFinish,
             title: "Wall Finish",
             description: "Smooth, high-quality interior painting."
           },
           {
-            url: oakLaminate,
+            url: colorCoat,
             title: "Color Coat",
             description: "Vibrant color application for any room."
           },
           {
-            url: greyLaminate,
+            url: matteFinish,
             title: "Matte Finish",
             description: "Modern matte wall coating with clean look."
           },
@@ -710,17 +716,17 @@ export const servicesData = {
           "Durable exterior coatings designed to protect your walls and maintain aesthetic appeal in all weather conditions.",
         images: [
           {
-            url: walnutLaminate,
+            url: weatherCoat,
             title: "Weather Coat",
             description: "Durable exterior paint for harsh conditions."
           },
           {
-            url: oakLaminate,
+            url: protectivePaint,
             title: "Protective Paint",
             description: "Long-lasting outdoor paint with UV resistance."
           },
           {
-            url: greyLaminate,
+            url: exteriorFinish,
             title: "Exterior Finish",
             description: "Smooth, elegant exterior wall finish."
           },
