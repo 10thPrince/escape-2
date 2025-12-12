@@ -63,6 +63,12 @@ import panelCeiling from '../assets/services-img/ceiling/gypsum/Panel-Ceiling.we
 import tvPanel from '../assets/services-img/ceiling/tv-wall/tv-panel.webp'
 import featuredWall from '../assets/services-img/ceiling/tv-wall/Feature-Wall.webp'
 import wallUnit from '../assets/services-img/ceiling/tv-wall/Wall-Unit.webp'
+import glassPartition from '../assets/services-img/partition/alimuniam/Glass-Partition.webp'
+import slimPartition from '../assets/services-img/partition/alimuniam/Slim-Partition.webp'
+import officeDivider from '../assets/services-img/partition/alimuniam/Office-Divider.webp'
+import gypsumWall from '../assets/services-img/partition/gypsum/Gypsum-Wall.webp'
+import panelPartition from '../assets/services-img/partition/gypsum/Panel-Partition.webp'
+import roomDivider from '../assets/services-img/partition/gypsum/Room-Divider.webp'
 
 
 export const servicesData = {
@@ -624,17 +630,17 @@ export const servicesData = {
           "Durable and modern aluminium partitions for offices, showrooms, and residential spaces.",
         images: [
           {
-            url: walnutLaminate,
+            url: glassPartition,
             title: "Glass Partition",
             description: "Modern aluminium-framed partition for offices."
           },
           {
-            url: oakLaminate,
+            url: slimPartition,
             title: "Slim Partition",
             description: "Minimal, elegant aluminium partition design."
           },
           {
-            url: greyLaminate,
+            url: officeDivider,
             title: "Office Divider",
             description: "Strong, clean partitions for workspaces."
           },
@@ -648,17 +654,17 @@ export const servicesData = {
           "Smooth, sound-insulating gypsum",
         images: [
           {
-            url: walnutLaminate,
+            url: gypsumWall,
             title: "Gypsum Wall",
             description: "Smooth gypsum wall with excellent insulation."
           },
           {
-            url: oakLaminate,
+            url: roomDivider,
             title: "Room Divider",
             description: "Effective gypsum divider for modern homes."
           },
           {
-            url: greyLaminate,
+            url: panelPartition,
             title: "Panel Partition",
             description: "Clean gypsum panels perfect for interiors."
           },
