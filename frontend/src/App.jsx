@@ -14,6 +14,7 @@ import ProjectsPage from './pages/ProjectsPage'
 import { useGetProfileMutation } from './slices/userApiSlice'
 import { setCredentials } from './slices/authSlice'
 import ManageWeb from './pages/ManageWeb'
+import Courses from './pages/Courses'
 
 
 
@@ -30,8 +31,8 @@ function App() {
   }, [user, isSuccess, dispatch])
 
   return (
-    <>
-      <BrowserRouter>
+    
+      <>
         <Routes>
           <Route index element={<Home />} />
           <Route path='*' element={<NotFound />} />
@@ -43,14 +44,15 @@ function App() {
           <Route path='/about' element={<AboutUs />} />
           <Route path='/contact' element={<ContactPage />} />
           <Route path='/projects' element={<ProjectsPage />} />
+          <Route path='/courses' element={<Courses />} />
           {/* Private Routes */}
           <Route path='' element={<PrivateRoute />}>
             <Route path='/profile' element={<ProfilePage />} />
             <Route path='/addProject' element={<ManageWeb />} />
           </Route>
         </Routes>
-      </BrowserRouter>
-    </>
+      </>
+    
   )
 }
 

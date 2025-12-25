@@ -41,7 +41,7 @@ const LoginPage = () => {
     }
     return (
         <>
-        <Navbar />
+        
         <ToastContainer />
         <div className="flex justify-center items-center min-h-screen py-30 bg-gray-50">
             

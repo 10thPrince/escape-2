@@ -39,7 +39,7 @@ const ServicesPage = () => {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar />
+      
       <FloatingSocials />
       <motion.div
         className="relative h-[50vh] lg:h-[70vh] flex items-center justify-center text-center bg-cover bg-center"
@@ -183,7 +183,7 @@ const ServicesPage = () => {
         </div>
       </div>
 
-      <Footer />
+      
     </div>
   );
 };

@@ -47,7 +47,7 @@ const RegisterPage = () => {
     }
     return (
         <>
-            <Navbar />
+           
             <ToastContainer />
             <div className="flex justify-center items-center min-h-screen bg-gray-50">
 

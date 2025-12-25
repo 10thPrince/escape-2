@@ -15,7 +15,7 @@ const Home = () => {
     return (
         <>
             <FloatingSocials />
-            <Navbar />
+            
             <ToastContainer />
             <Hero />
             <WhyUs />
@@ -23,7 +23,7 @@ const Home = () => {
             <AboutUsInvite />
             <Content />
             <Contact />
-            <Footer />
+            
         </>
 
     )

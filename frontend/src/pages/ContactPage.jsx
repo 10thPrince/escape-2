@@ -58,7 +58,7 @@ const ContactPage = () => {
   return (
     <>
       <ToastContainer />
-      <Navbar />
+      
       {/* <FloatingSocials /> */}
       <section className="py-18 bg-gray-50 overflow-hidden">
 
@@ -285,7 +285,6 @@ const ContactPage = () => {
         </div>
 
       </section>
-      <Footer />
     </>
   );
 };

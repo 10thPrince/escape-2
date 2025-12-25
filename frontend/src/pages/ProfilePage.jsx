@@ -73,7 +73,7 @@ const ProfilePage = () => {
 
   return (
     <>
-      <Navbar />
+      
       <ToastContainer />
 
       <div className="w-full text-center fugaz text-2xl mt-30">
@@ -186,7 +186,7 @@ const ProfilePage = () => {
         </div>
       </Modal>
 
-      <Footer />
+      
 
     </>
   );

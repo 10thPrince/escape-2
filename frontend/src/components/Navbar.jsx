@@ -53,6 +53,7 @@ const Navbar = () => {
           <Link to="/about" className="hover:text-primary text-sm lg:text-lg transition">About Us</Link>
           <Link to="/contact" className="hover:text-primary text-sm lg:text-lg transition">Contact Us</Link>
           <Link to="/projects" className="hover:text-primary text-sm lg:text-lg transition">Our Projects</Link>
+          <Link to="/courses" className="hover:text-primary text-sm lg:text-lg transition">Courses</Link>
         </div>
 
         {/* RIGHT ACTIONS */}
@@ -152,6 +153,7 @@ const Navbar = () => {
             <Link to="/about" onClick={() => setIsOpen(false)}>About Us</Link>
             <Link to="/contact" onClick={() => setIsOpen(false)}>Contact Us</Link>
             <Link to="/projects" onClick={() => setIsOpen(false)}>Projects</Link>
+            <Link to="/courses" onClick={() => setIsOpen(false)}>Courses</Link>
 
             {userInfo ? (
               <Link

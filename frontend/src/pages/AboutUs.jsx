@@ -58,7 +58,7 @@ const AboutSection = ({ title, text, img, reverse }) => {
 const AboutUs = () => {
     return (
         <>
-            <Navbar />
+            
             <FloatingSocials />
             <div className="w-full overflow-hidden">
                 {/* Hero Section */}
@@ -170,7 +170,6 @@ const AboutUs = () => {
                     </motion.a>
                 </section>
             </div>
-            <Footer />
         </>
     )
 }
