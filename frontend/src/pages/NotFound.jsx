@@ -10,7 +10,7 @@ const NotFound = () => {
   return (
     <>
       <FloatingSocials />
-      <Navbar />
+      
       <div className="min-h-screen bg-[#1a1a1a] flex items-center border-b border-primary justify-center px-6">
         <motion.div
           className="max-w-2xl mx-auto text-center space-y-6"
@@ -44,7 +44,6 @@ const NotFound = () => {
           </Link>
         </motion.div>
       </div>
-      <Footer />
     </>
   )
 }

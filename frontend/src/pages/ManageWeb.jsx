@@ -9,7 +9,7 @@ import { ArrowBigLeftDash, ArrowBigRightDash } from 'lucide-react'
 const ManageWeb = () => {
   return (
     <>
-        <Navbar />
+       
         <h1 className='mt-40 text-4xl text-primary fugaz'>Projects Management</h1>
         <div className='flex flex-col md:flex-row gap-3 px-10'>
             <AddProject />
@@ -27,7 +27,6 @@ const ManageWeb = () => {
                 Manage ur Profile <ArrowBigRightDash />
             </Link>
         </div>
-        <Footer />
     </>
   )
 }

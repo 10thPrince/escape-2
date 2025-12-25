@@ -7,10 +7,10 @@ const ProjectsPage = () => {
 
   return (
     <div className="min-h-screen ">
-      <Navbar />
+      
       <FloatingSocials />
       <FetchProjects />
-      <Footer />
+      
 
       
       
