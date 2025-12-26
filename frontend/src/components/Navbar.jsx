@@ -40,24 +40,24 @@ const Navbar = () => {
         </Link>
 
         {/* DESKTOP MENU */}
-        <div className="hidden md:flex items-center gap-10 text-gray-800 font-medium text-lg">
+        <div className="hidden lg:flex items-center gap-10 text-gray-800 font-medium text-lg">
           
           {/* SERVICES DROPDOWN BUTTON */}
           <button
             onClick={() => setDropdownOpen((p) => !p)}
-            className="flex items-center gap-1 text-sm lg:text-lg hover:text-primary transition"
+            className="flex items-center gap-1 text-sm xl:text-lg hover:text-primary transition"
           >
             Our Services <ChevronDown size={18} />
           </button>
 
-          <Link to="/about" className="hover:text-primary text-sm lg:text-lg transition">About Us</Link>
-          <Link to="/contact" className="hover:text-primary text-sm lg:text-lg transition">Contact Us</Link>
-          <Link to="/projects" className="hover:text-primary text-sm lg:text-lg transition">Our Projects</Link>
-          <Link to="/courses" className="hover:text-primary text-sm lg:text-lg transition">Courses</Link>
+          <Link to="/courses" className="hover:text-primary text-sm xl:text-lg transition">Courses</Link>
+          <Link to="/about" className="hover:text-primary text-sm xl:text-lg transition">About Us</Link>
+          <Link to="/contact" className="hover:text-primary text-sm xl:text-lg transition">Contact Us</Link>
+          <Link to="/projects" className="hover:text-primary text-sm xl:text-lg transition">Our Projects</Link>
         </div>
 
         {/* RIGHT ACTIONS */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-6">
           {userInfo ? (
             <Link
               to="/addProject"
@@ -85,7 +85,7 @@ const Navbar = () => {
         {/* MOBILE MENU TOGGLE */}
         <button
           onClick={() => setIsOpen((prev) => !prev)}
-          className="md:hidden"
+          className="lg:hidden"
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
@@ -93,7 +93,7 @@ const Navbar = () => {
 
       {/* DESKTOP DROPDOWN (FULL WIDTH) */}
       {dropdownOpen && (
-        <div className="hidden md:block bg-white border-t shadow-xl absolute w-full left-0 animate-fadeDown">
+        <div className="hidden lg:block bg-white border-t shadow-xl absolute w-full left-0 animate-fadeDown">
           <div className="max-w-7xl mx-auto px-10 py-8 grid grid-cols-2 md:grid-cols-4 gap-8">
             {servicesArray.map((service, index) => (
               <div key={index} className="text-start">
@@ -127,7 +127,7 @@ const Navbar = () => {
 
       {/* MOBILE MENU */}
       {isOpen && (
-        <div className="md:hidden bg-white shadow-lg border-t animate-slideDown">
+        <div className="lg:hidden bg-white shadow-lg border-t animate-slideDown">
           <ul className="flex flex-col items-center py-5 space-y-4 text-gray-800 text-lg">
             
             {/* Mobile Services Dropdown */}
