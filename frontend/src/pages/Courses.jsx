@@ -56,9 +56,9 @@ const Courses = () => {
                             <Sparkles className="w-6 h-6" />
                         </div>
                         <h3
-                            className="text-white text-3xl md:text-4xl lg:text-5xl text-start font-accent font-bold leading-none tracking-tight">
-                            Professional training courses<br />
-                            <span className="text-primary">by Escape Ltd</span><br />
+                            className="text-white text-3xl md:text-4xl lg:text-5xl text-start font-accent  leading-none tracking-tight">
+                            <span className='font-bold'>Professional training courses</span><br />
+                            <span className="text-primary fugaz">by Escape Ltd</span><br />
 
                         </h3>
                         <p
@@ -87,7 +87,7 @@ const Courses = () => {
             <section id='courses' className="scroll-mt-20 w-full px-4 py-4 my-15 md:px-20">
                 {/* Header */}
                 <div className="mb-10 w-full">
-                    <h2 className="text-2xl md:text-3xl text-fugaz text-secondary font-bold ">
+                    <h2 className="text-2xl md:text-3xl fugaz text-secondary font-bold ">
                         Professional Training Programs
                     </h2>
                     <p className="mt-3 text-sm md:text-base text-gray-600">
