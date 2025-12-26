@@ -1,6 +1,10 @@
 import React from 'react'
 import courseLangingImage from '../assets/landing-page-2.jpg'
 import { ArrowDown, CircleStar, Phone, Sparkles, StarIcon } from 'lucide-react'
+import carpentry from '../../public/assets/courses/carpentry.avif'
+import interiorDesign from '../../public/assets/courses/interior-design.webp'
+import pm from '../../public/assets/courses/project-manager.webp'
+import woodenInst from '../../public/assets/courses/wooden-install.jpg'
 
 const Courses = () => {
 
@@ -10,7 +14,7 @@ const Courses = () => {
             title: "Carpentry",
             description:
                 "Practical training in carpentry covering material selection, cutting, joining, finishing, and installation for residential and commercial projects.",
-            image: courseLangingImage,
+            image: carpentry,
         },
         {
             id: 2,
@@ -18,21 +22,21 @@ const Courses = () => {
             description:
                 "Hands-on course focused on professional installation of wooden flooring systems, including surface preparation, alignment, fixing, and finishing.",
 
-            image: courseLangingImage,
+            image: woodenInst,
         },
         {
             id: 3,
             title: "Interior Design",
             description:
                 "Learn core principles of interior design including space planning, lighting, color coordination, and functional aesthetics for modern interiors.",
-            image: courseLangingImage,
+            image: interiorDesign,
         },
         {
             id: 4,
             title: "Project Management",
             description:
                 "Develop skills in planning, budgeting, scheduling, team coordination, and quality control for construction and interior projects.",
-            image: courseLangingImage,
+            image: pm,
         },
     ];
     return (
@@ -65,7 +69,7 @@ const Courses = () => {
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 pt-4">
                             <a className="flex gap-3 items-center justify-center rounded-full h-14 px-10 bg-primary hover:bg-primary-dark text-white text-base font-bold transition-all transform hover:scale-105 shadow-lg shadow-primary/30"
-                                href="/#">
+                                href="#courses">
                                 View Course <ArrowDown />
                             </a>
                             <a className="flex gap-3 items-center justify-center rounded-full h-14 px-10 bg-white hover:bg-slate-100 text-slate-900 text-base font-bold transition-all shadow-lg"
@@ -80,10 +84,10 @@ const Courses = () => {
                 </div>
             </section>
 
-            <section className="w-full px-4 py-16 md:px-20">
+            <section id='courses' className="scroll-mt-20 w-full px-4 py-4 my-15 md:px-20">
                 {/* Header */}
-                <div className="mb-10 max-w-3xl">
-                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+                <div className="mb-10 w-full">
+                    <h2 className="text-2xl md:text-3xl text-fugaz text-secondary font-bold ">
                         Professional Training Programs
                     </h2>
                     <p className="mt-3 text-sm md:text-base text-gray-600">
