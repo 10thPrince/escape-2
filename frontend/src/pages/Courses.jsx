@@ -6,6 +6,7 @@ import interiorDesign from '../../public/assets/courses/interior-design.webp'
 import pm from '../../public/assets/courses/project-manager.webp'
 import woodenInst from '../../public/assets/courses/wooden-install.jpg'
 
+
 const Courses = () => {
 
     const courses = [
@@ -21,7 +22,6 @@ const Courses = () => {
             title: "Wooden Floor Installation",
             description:
                 "Hands-on course focused on professional installation of wooden flooring systems, including surface preparation, alignment, fixing, and finishing.",
-
             image: woodenInst,
         },
         {
