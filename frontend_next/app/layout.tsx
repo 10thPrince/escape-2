@@ -23,6 +23,9 @@ export const metadata = {
   },
   description:
     "Escape Ltd provides professional interior design, flooring, and exhibition stand solutions in Kigali, Rwanda.",
+  icons: {
+    icon: "/icon.ico",
+  }
 };
 
 export default function RootLayout({
