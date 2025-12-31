@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import FetchProjects from './FetchProjects'
 
 const Projects = () => {
     return (
@@ -17,6 +18,7 @@ const Projects = () => {
                     Our Memorable <span className="text-glow">Projects</span>
                 </h1>
             </section>
+            <FetchProjects />
         </div>
     )
 }

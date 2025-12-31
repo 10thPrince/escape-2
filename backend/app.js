@@ -23,7 +23,7 @@ cron.schedule('*/14 * * * *', ()=>{
 // }, 5 *60 *1000)
 
 app.use(cors({
-    origin: ['http://localhost:3500', 'https://escape-2-8si5.vercel.app'],
+    origin: ['http://localhost:3500', 'https://escape-2-plum.vercel.app', 'https://www.escapeltd.rw'],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
 }));
