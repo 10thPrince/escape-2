@@ -13,7 +13,7 @@ const Content = () => {
           <p className="text-gray-600 leading-relaxed">
             Experience the perfect blend of elegance and functionality with our best bathroom designs...
           </p>
-          <Link href="/services/">
+          <Link href="/services/flooring">
             <button className="border border-primary px-6 py-3 uppercase tracking-wide hover:bg-primary hover:text-white transition duration-300">
               Discover Designs
             </button>
@@ -40,7 +40,7 @@ const Content = () => {
           <p className="text-gray-600 leading-relaxed">
             Transform your kitchen into a centerpiece of style and comfort...
           </p>
-          <Link href="/services/">
+          <Link href="/services/kitchen">
             <button className="border border-primary px-6 py-3 uppercase tracking-wide hover:bg-primary hover:text-white transition duration-300">
               Discover Designs
             </button>
