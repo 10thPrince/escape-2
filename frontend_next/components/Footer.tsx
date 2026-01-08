@@ -5,6 +5,7 @@ import { Facebook, Instagram, Linkedin, Twitter, ArrowUpRight } from "lucide-rea
 const links = [
   { name: "Home", linkUrl: "/" },
   { name: "About Us", linkUrl: "/about" },
+  { name: "Our Courses", linkUrl: "/courses" },
   { name: "Our Services", linkUrl: "/services" },
   { name: "Projects", linkUrl: "/projects" },
   { name: "Contact", linkUrl: "/contact" },
