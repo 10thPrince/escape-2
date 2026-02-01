@@ -43,7 +43,7 @@ export default function Navbar() {
           </button>
           <Link href="/courses" className="hover:text-primary transition">Courses</Link>
           <Link href="/about" className="hover:text-primary transition">About Us</Link>
-          <Link href="/contact" className="hover:text-primary transition">Contact</Link>
+          <Link href="/contact" className="hover:text-primary transition">Contact Us</Link>
           <Link href="/projects" className="hover:text-primary transition">Projects</Link>
         </div>
 
