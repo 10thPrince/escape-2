@@ -38,7 +38,7 @@ export default function NavbarMobileMenu() {
           </details>
 
           <Link href="/about" onClick={() => setIsOpen(false)}>About Us</Link>
-          <Link href="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
+          <Link href="/contact" onClick={() => setIsOpen(false)}>Contact Us</Link>
           <Link href="/projects" onClick={() => setIsOpen(false)}>Projects</Link>
           <Link href="/courses" onClick={() => setIsOpen(false)}>Courses</Link>
         </div>
