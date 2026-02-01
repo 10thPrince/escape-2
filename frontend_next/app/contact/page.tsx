@@ -52,7 +52,7 @@ export default function Contact() {
                                     href="mailto:info@escapeltd.com"
                                     className="text-gray-600 hover:text-primary"
                                 >
-                                    info@escapeltd.com
+                                    info@escapeltd.rw
                                 </a>
                             </div>
                         </div>
