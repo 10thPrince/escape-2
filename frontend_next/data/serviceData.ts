@@ -1,80 +1,4 @@
-import livingRoomImg from "../assets/hero-1.jpeg";
-import decorImg from "../assets/hero-1.jpeg";
-import oakLaminate from '../assets/services-img/flooring/laminate/Oak-laminate-flooring.jpg'
-import walnutLaminate from '../assets/services-img/flooring/laminate/dark-walnut.webp'
-import greyLaminate from '../assets/services-img/flooring/laminate/grey-laminate1.webp'
-import woodSPC from '../assets/services-img/flooring/spc/wood.webp'
-import stoneSPC from '../assets/services-img/flooring/spc/stone.jpeg'
-import marbleSPC from '../assets/services-img/flooring/spc/marble.jpg'
-import wpc from '../assets/services-img/flooring/decking/wpc.avif'
-import pvc from '../assets/services-img/flooring/decking/pvDecking.webp'
-import bamboo from '../assets/services-img/flooring/decking/bamboo.webp'
-import walnutEW from '../assets/services-img/flooring/engineered-w/walnut.webp'
-import oakEW from '../assets/services-img/flooring/engineered-w/oak.webp'
-import mapleEW from '../assets/services-img/flooring/engineered-w/maple.webp'
-import cloth from '../assets/services-img/flooring/cleaning/cloth.webp'
-import mop from '../assets/services-img/flooring/cleaning/mop.webp'
-import spray from '../assets/services-img/flooring/cleaning/spray.webp'
-import underlay from '../assets/services-img/flooring/accessories/accessories-Underlay.avif'
-import molding from '../assets/services-img/flooring/accessories/accessories-Moulding.webp'
-import skirting from '../assets/services-img/flooring/accessories/accessories-Skirting.webp'
-import boothEx1 from '../assets/services-img/booth/exbition-booth/booth-premium.jpeg'
-import boothEx2 from '../assets/services-img/booth/exbition-booth/booth-compact.webp'
-import boothEx3 from '../assets/services-img/booth/exbition-booth/booth-modern.webp'
-import classicBooth from '../assets/services-img/booth/photo-booth/photo-booth.webp'
-import selfieBooth from '../assets/services-img/booth/photo-booth/selfie-booth.png'
-import ledBooth from '../assets/services-img/booth/photo-booth/LED-booth.webp'
-import elegathBooth from '../assets/services-img/booth/decor/elegant-booth.webp'
-import modernBooth from '../assets/services-img/booth/decor/modern-booth.webp'
-import themeBooth from '../assets/services-img/booth/decor/theme-booth.webp'
-import remodelKitchen from '../assets/services-img/kitchen/renovate/kitchen-remodel.webp'
-import cabinetKitchen from '../assets/services-img/kitchen/renovate/binet-kitchen.webp'
-import flooringKitchen from '../assets/services-img/kitchen/renovate/flooring-kitchen.webp'
-import contemporaryKitchen from '../assets/services-img/kitchen/modern/contemporary-kitchen.webp'
-import cabinetInstallation from '../assets/services-img/kitchen/modern/cabinet-installation.webp'
-import modernKitchen from '../assets/services-img/kitchen/modern/modern-kitchen.webp'
-import luxeSofa from '../assets/services-img/furniture/sofa/luxe-sofa.webp'
-import modernSofa from '../assets/services-img/furniture/sofa/modern-sofa.webp'
-import compactSofa from '../assets/services-img/furniture/sofa/comapact-sofa.webp'
-import coffeeTable from '../assets/services-img/furniture/tables/coffee-table.webp'
-import diningTable from '../assets/services-img/furniture/tables/dining-table.webp'
-import sideTable from '../assets/services-img/furniture/tables/side-table.webp'
-import modernCabinet from '../assets/services-img/furniture/cabinets/modern-cabinet1.webp'
-import tvStand from '../assets/services-img/furniture/cabinets/v-stand.webp'
-import wallCabinet from '../assets/services-img/furniture/cabinets/wall-cabinet.webp'
-import diningChair from '../assets/services-img/furniture/chair/dining-chair.webp'
-import loungeChaire from '../assets/services-img/furniture/chair/lounge-chair.webp'
-import officeChaire from '../assets/services-img/furniture/chair/office-chaire.webp'
-import customBuild from '../assets/services-img/furniture/escape/custom-build.webp'
-import escapeDesign from '../assets/services-img/furniture/escape/scape-design.webp'
-import signaturePiesce from '../assets/services-img/furniture/escape/signature-piece.webp'
-import steelDoor from '../assets/services-img/doors/metal/steel-door.webp'
-import heavyDoor from '../assets/services-img/doors/metal/heavy-door.webp'
-import metalFrame from '../assets/services-img/doors/metal/meal-frame.webp'
-import classicWood from '../assets/services-img/doors/wooden/classic-doors.webp'
-import panelDoor from '../assets/services-img/doors/wooden/panel-door.webp'
-import modernDoor from '../assets/services-img/doors/wooden/modern-wood-door.webp'
-import escapeDoor from '../assets/services-img/doors/escape/escape-door.webp'
-import signatureDoor from '../assets/services-img/doors/escape/signature-doors.webp'
-import designedDoor from '../assets/services-img/doors/escape/designer-door.webp'
-import modernCeiling from '../assets/services-img/ceiling/gypsum/modern-ceiling.webp'
-import ledCeiling from '../assets/services-img/ceiling/gypsum/LED-Ceiling.webp'
-import panelCeiling from '../assets/services-img/ceiling/gypsum/Panel-Ceiling.webp'
-import tvPanel from '../assets/services-img/ceiling/tv-wall/tv-panel.webp'
-import featuredWall from '../assets/services-img/ceiling/tv-wall/Feature-Wall.webp'
-import wallUnit from '../assets/services-img/ceiling/tv-wall/Wall-Unit.webp'
-import glassPartition from '../assets/services-img/partition/alimuniam/Glass-Partition.webp'
-import slimPartition from '../assets/services-img/partition/alimuniam/Slim-Partition.webp'
-import officeDivider from '../assets/services-img/partition/alimuniam/Office-Divider.webp'
-import gypsumWall from '../assets/services-img/partition/gypsum/Gypsum-Wall.webp'
-import panelPartition from '../assets/services-img/partition/gypsum/Panel-Partition.webp'
-import roomDivider from '../assets/services-img/partition/gypsum/Room-Divider.webp'
-import wallFinish from '../assets/services-img/paint/interior/wall-finish2.webp'
-import colorCoat from '../assets/services-img/paint/interior/color-coat2.webp'
-import matteFinish from '../assets/services-img/paint/interior/matte-finish.webp'
-import weatherCoat from '../assets/services-img/paint/exterior/WeatherCoat.webp'
-import protectivePaint from '../assets/services-img/paint/exterior/ProtectivePaint.webp'
-import exteriorFinish from '../assets/services-img/paint/exterior/ExteriorFinish.jpg'
+
 
 
 export const servicesData = {
@@ -187,7 +111,7 @@ export const servicesData = {
             description: "Quick and safe cleaning for wood surfaces."
           },
           {
-            url: "/assets/services-img/flooring/cleaning/mop.webp",
+            url: "/assets/services-img/flooring/cleaning/mop.jpg",
             title: 'Microfiber Mop Kit',
             description: "Gentle mop that traps dust without scratching."
           },
@@ -495,7 +419,7 @@ export const servicesData = {
             description: "High-security steel door with modern finish."
           },
           {
-            url: "/assets/services-img/doors/metal/heavy-door.webp",
+            url: "/assets/services-img/doors/metal/heavy.jpg",
             title: "Heavy Door",
             description: "Strong, durable door for maximum protection."
           },
