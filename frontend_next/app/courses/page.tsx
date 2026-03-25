@@ -6,49 +6,49 @@ import FloatingSocials from '@/components/FloatingSocials';
 
 
 export const metadata: Metadata = {
-    title: "Professional Training Courses | Escape Ltd",
-    description:
-        "Professional training courses in Carpentry, Wooden Floor Installation, Interior Design, and Project Management by Escape Ltd.",
+  title: "Professional Training Courses | Escape Ltd",
+  description:
+    "Professional training courses in Carpentry, Wooden Floor Installation, Interior Design, and Project Management by Escape Ltd.",
 };
 
 
 
 const Courses = () => {
 
-    const courses = [
-        {
-            id: 1,
-            title: "Carpentry",
-            description:
-                "Practical training in carpentry covering material selection, cutting, joining, finishing, and installation for residential and commercial projects.",
-            image: "/assets/courses/carpentry.avif",
-        },
-        {
-            id: 2,
-            title: "Wooden Floor Installation",
-            description:
-                "Hands-on course focused on professional installation of wooden flooring systems, including surface preparation, alignment, fixing, and finishing.",
-            image: "/assets/courses/wooden-install.jpg",
-        },
-        {
-            id: 3,
-            title: "Interior Design",
-            description:
-                "Learn core principles of interior design including space planning, lighting, color coordination, and functional aesthetics for modern interiors.",
-            image: "/assets/courses/interior-design.webp",
-        },
-        {
-            id: 4,
-            title: "Project Management",
-            description:
-                "Develop skills in planning, budgeting, scheduling, team coordination, and quality control for construction and interior projects.",
-            image: "/assets/courses/project-manager.webp",
-        },
-    ];
-    return (
-        <>
-            <FloatingSocials />
-            <section className="relative bg-white h-[85vh] min-h-[600px] flex items-center">
+  const courses = [
+    {
+      id: 1,
+      title: "Carpentry",
+      description:
+        "Practical training in carpentry covering material selection, cutting, joining, finishing, and installation for residential and commercial projects.",
+      image: "/assets/courses/carpentry.avif",
+    },
+    {
+      id: 2,
+      title: "Wooden Floor Installation",
+      description:
+        "Hands-on course focused on professional installation of wooden flooring systems, including surface preparation, alignment, fixing, and finishing.",
+      image: "/assets/courses/wooden-install.jpg",
+    },
+    {
+      id: 3,
+      title: "Interior Design",
+      description:
+        "Learn core principles of interior design including space planning, lighting, color coordination, and functional aesthetics for modern interiors.",
+      image: "/assets/courses/interior-design.webp",
+    },
+    {
+      id: 4,
+      title: "Project Management",
+      description:
+        "Develop skills in planning, budgeting, scheduling, team coordination, and quality control for construction and interior projects.",
+      image: "/assets/courses/project-manager.webp",
+    },
+  ];
+  return (
+    <>
+      <FloatingSocials />
+      <section className="relative bg-white h-[85vh] min-h-[600px] flex items-center">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-slate-900/40 z-10" />
           <Image
@@ -148,9 +148,9 @@ const Courses = () => {
           ))}
         </div>
       </section>
-        </>
+    </>
 
-    )
+  )
 }
 
 export default Courses
