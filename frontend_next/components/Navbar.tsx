@@ -25,7 +25,7 @@ export default function Navbar() {
     return () => document.removeEventListener("click", handleClick);
   }, []);
   return (
-    <header className="bg-white shadow-md fixed w-full top-0 left-0 z-50">
+    <header className="bg-white shadow-md sticky w-full top-0 left-0 z-50">
       <div className="max-w-8xl mx-auto px-6 py-2 flex justify-between items-center relative">
         {/* LOGO */}
         <Link href="/">
