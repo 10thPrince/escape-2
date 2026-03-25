@@ -8,7 +8,7 @@ const router = express.Router();
 
 router.post('/', register)
 router.post('/login', login)
-router.post('/logout', logout)
+router.get('/logout', protect, logout)
 router.route('/profile').get(protect, getUserProfile).put(protect, updateUserProfile)
 
 export default router   
